@@ -8,8 +8,11 @@ from statsmodels.tsa.stattools import adfuller, kpss
 import numpy as np
 import scipy.stats as stats
 
-## TODO volver esto un metodo que genere las funciones de autocorrealacion simple y parcial
-## recibe una serie o un pandas dataframe
+## TO-DO refactor Gabriel.
+
+## TO-DO volver esto un metodo que recibe una serie o un pandas dataframe ver como se hace tipado
+## agregar condicion que impida seguir adelante si lags > sqrt(T)
+## T es el total de observaciones Andreina
 def get_auto_correlation_function():
     plot_acf(Xt, lags=5)
     plt.title('Función de Autocorrelación Simple (ACF)')
@@ -23,15 +26,21 @@ def get_auto_correlation_function():
     plt.ylabel('PACF')
     plt.show()
 
-
+## Volver esto una clase que tenga dos metodos, ajustar arima by config
+## Ajustar Auto Arima  y que tenga los metodos get_auto_correlation function
+## residual test.
+## el metodo residual test debe ocurrir despues de ajustar el arima.
+## Gabriel
 def arima_model():
     modelo = sm.tsa.ARIMA(Xt, order=(1, 0, 1))
     resultado = modelo.fit()
     residuos = resultado.resid
     return {"modelo": modelo, "residuos":residuos}
 
-## TO-DO organizar cada test en un metodo
-
+## TO-DO Generar un metodo que haga los test de estadionaridad
+## debe retornar un diccionario que diga el test como clave, como valor otro
+## diccionario que diga el p-value y si es o no estacionaria al 5%
+## Andreina.
 # Prueba de Dickey-Fuller Aumentada (ADF) para estacionaridad
 adf_test = adfuller(residuos)
 adf_statistic, adf_pvalue, _, _, adf_critical_values, _ = adf_test
