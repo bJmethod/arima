@@ -20,6 +20,8 @@ class model :
 ## vamos a dejar que sea customisable si queremos directo el pronostico o queremos activarlo nosotros
 ## en cualquier caso queda resuelta la posible customizacion
 
+## to - do falta metodo que compare las metricas de los dos mejores autoarima y elija el mejor de los dos
+    
     def get_arima(self,zt,auto,epec,season):
         if auto :
             self.params= {
