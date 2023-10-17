@@ -22,20 +22,26 @@ class model :
 
 ## to - do falta metodo que compare las metricas de los dos mejores autoarima y elija el mejor de los dos
     
-    def get_arima(self,zt,auto,epec,season):
-        if auto :
+    def get_arima(self):
+        if self.auto :
             self.params= {
-                "autoarima":auto,
-                "specification": spec,
+                "autoarima": self.auto,
+                "specification": self.spec,
 
             }
-            max_order= int(2/np.sqrt(len(zt)))
-            max_d =2
-            seasonal=False
+            self.max_order= int(2/np.sqrt(len(self.zt)))
+            self.max_d =2
+            self.seasonal=False
+            self.start = 1
+            self.D = 0
             model_no_season = auto_arima(self.zt,
+                                         start_p=self.start,
+                                         start_q=self.start,
+                                         start_P=self.start,
                                          max_p= self.max_order,
                                          max_q = self.max_order,
                                          max_d=self.max_d,
+                                         D=self.D,
                                          seasonal = self.seasonal,
                                          trace=True,
                                          error_action='ignore',
@@ -43,34 +49,45 @@ class model :
                                          stepwise=True)
             self.no_season = model_no_season
             model_season = auto_arima(self.zt,
-                                         max_p=self.max_order,
-                                         max_q=self.max_order,
-                                         max_d=self.max_d,
-                                         seasonal=self.seasonal,
+                                        start_p=self.start,
+                                        start_q=self.start,
+                                        start_P=self.start,
+                                        D=self.D,
+                                        max_p=self.max_order,
+                                        max_q=self.max_order,
+                                        max_d=self.max_d,
+                                        seasonal=self.seasonal,
                                          m=12,
                                          trace=True,
                                          error_action='ignore',
                                          suppress_warnings=True,
                                          stepwise=True)
-            self.season = model_season
+            self.model_season = model_season
+
+            aic_season = self.model_season.aic()
+            aic_no_season = self.no_season.aic()
+            if aic_season > aic_no_season:
+                self.model = self.model_season
+            else:
+                self.model = self.no_season
         else:
             if len(self.spec)>0:
                 try:
                     if self.season:
-                       season_model= auto_arima(self.zt,
+                       self.season_model= auto_arima(self.zt,
                                    p = self.spec[0],
                                    d = self.spec[1],
                                    q = self.spec[2],
-                                   seasonal = season,
+                                   seasonal = self.season,
                                    m = 12
 
                         )
                     else:
-                        season_model = auto_arima(self.zt,
+                        self.season_model = auto_arima(self.zt,
                                                   p=self.spec[0],
                                                   d=self.spec[1],
                                                   q=self.spec[2],
-                                                  seasonal=season,
+                                                  seasonal=self.season,
                                                   m=12
                                                   )
                 except:
@@ -78,5 +95,14 @@ class model :
 
 
 
+if __name__== "__main__":
+    df = pd.read_excel("C:/Users/Usuario/Documents/Arima.xlsx",skiprows= 1)
+    Xt = df[['Ejecución Comprometida']].copy()
+    Xt.rename(columns={'Ejecución Comprometida': 'ejec_cp'}, inplace=True)
 
+    model = model(Xt,"true",[],False)
+
+    a = 1
+    model.get_arima()
+    a +=1
 
