@@ -19,35 +19,31 @@ class model :
 ## pensarán en especificar o querran la estimacion directo?
 ## vamos a dejar que sea customisable si queremos directo el pronostico o queremos activarlo nosotros
 ## en cualquier caso queda resuelta la posible customizacion
-
-## to - do falta metodo que compare las metricas de los dos mejores autoarima y elija el mejor de los dos
-    
+## TO-DO
+## podemos agregmar estimacion por el test ADF
+## test unitarios con pytest
     def get_arima(self):
-        if self.auto :
+        print(f" generating autoarima{self.auto}")
+        if self.auto:
             self.params= {
                 "autoarima": self.auto,
                 "specification": self.spec,
 
             }
-            self.max_order= int(2/np.sqrt(len(self.zt)))
+            self.max_order= 2
             self.max_d =2
             self.seasonal=False
             self.start = 1
-            self.D = 0
-            model_no_season = auto_arima(self.zt,
-                                         start_p=self.start,
-                                         start_q=self.start,
-                                         start_P=self.start,
-                                         max_p= self.max_order,
-                                         max_q = self.max_order,
-                                         max_d=self.max_d,
-                                         D=self.D,
-                                         seasonal = self.seasonal,
-                                         trace=True,
-                                         error_action='ignore',
-                                         suppress_warnings=True,
-                                         stepwise=True)
+            self.D = 2
+            model_no_season = auto_arima(Xt, start_p=self.start, start_q=self.start,
+                           max_p=self.max_order, max_q=self.max_order,
+                            seasonal= self.seasonal,
+                           max_d=self.max_d , trace=True,
+                           error_action='ignore',
+                           suppress_warnings=True,
+                           stepwise=True)
             self.no_season = model_no_season
+            ## podemos agregar la estimacion de D con el metodo de canova
             model_season = auto_arima(self.zt,
                                         start_p=self.start,
                                         start_q=self.start,
@@ -56,7 +52,6 @@ class model :
                                         max_p=self.max_order,
                                         max_q=self.max_order,
                                         max_d=self.max_d,
-                                        seasonal=self.seasonal,
                                          m=12,
                                          trace=True,
                                          error_action='ignore',
@@ -67,23 +62,25 @@ class model :
             aic_season = self.model_season.aic()
             aic_no_season = self.no_season.aic()
             if aic_season > aic_no_season:
-                self.model = self.model_season
-            else:
                 self.model = self.no_season
+            else:
+                self.model = self.model_season
         else:
             if len(self.spec)>0:
                 try:
                     if self.season:
-                       self.season_model= auto_arima(self.zt,
+                       self.model= auto_arima(self.zt,
                                    p = self.spec[0],
                                    d = self.spec[1],
                                    q = self.spec[2],
                                    seasonal = self.season,
-                                   m = 12
+                                   m=12
 
                         )
+
+
                     else:
-                        self.season_model = auto_arima(self.zt,
+                        self.model = auto_arima(self.zt,
                                                   p=self.spec[0],
                                                   d=self.spec[1],
                                                   q=self.spec[2],
@@ -93,6 +90,14 @@ class model :
                 except:
                     print(f"parameter set wornglty setted {self.params}")
 
+    def forecast(self):
+        try:
+          self.predictions =  self.model.predict(
+            n_periods = 18
+            )
+        except:
+            print("no model was set or n periods ahead are unapropriate")
+        # to-do agergar que escriba un csv en en el proyecto.
 
 
 if __name__== "__main__":
@@ -100,7 +105,7 @@ if __name__== "__main__":
     Xt = df[['Ejecución Comprometida']].copy()
     Xt.rename(columns={'Ejecución Comprometida': 'ejec_cp'}, inplace=True)
 
-    model = model(Xt,"true",[],False)
+    model = model(Xt,"true",[],True)
 
     a = 1
     model.get_arima()
