@@ -90,10 +90,10 @@ class model :
                 except:
                     print(f"parameter set wornglty setted {self.params}")
 
-    def forecast(self):
+    def forecast(self, periods:int):
         try:
-          self.predictions =  self.model.predict(
-            n_periods = 18
+          self.predictions = self.model.predict(
+            n_periods = periods
             )
         except:
             print("no model was set or n periods ahead are unapropriate")
