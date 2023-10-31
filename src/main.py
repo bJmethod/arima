@@ -35,7 +35,7 @@ class model :
             self.seasonal=False
             self.start = 1
             self.D = 2
-            model_no_season = auto_arima(Xt, start_p=self.start, start_q=self.start,
+            model_no_season = auto_arima(self.zt, start_p=self.start, start_q=self.start,
                            max_p=self.max_order, max_q=self.max_order,
                             seasonal= self.seasonal,
                            max_d=self.max_d , trace=True,
@@ -100,14 +100,14 @@ class model :
         # to-do agergar que escriba un csv en en el proyecto.
 
 
-if __name__== "__main__":
-    df = pd.read_excel("C:/Users/Usuario/Documents/Arima.xlsx",skiprows= 1)
-    Xt = df[['Ejecución Comprometida']].copy()
-    Xt.rename(columns={'Ejecución Comprometida': 'ejec_cp'}, inplace=True)
-
-    model = model(Xt,"true",[],True)
-
-    a = 1
-    model.get_arima()
-    a +=1
-
+# if __name__== "__main__":
+#     df = pd.read_excel("C:/Users/Usuario/Documents/Arima.xlsx",skiprows= 1)
+#     Xt = df[['Ejecución Comprometida']].copy()
+#     Xt.rename(columns={'Ejecución Comprometida': 'ejec_cp'}, inplace=True)
+#
+#     model = model(Xt,"true",[],True)
+#
+#     a = 1
+#     model.get_arima()
+#     a +=1
+#

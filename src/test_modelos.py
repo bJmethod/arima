@@ -1,14 +1,15 @@
 import unittest
 import main
-
+import numpy as np
 class TestModelos(unittest.TestCase):
 
-## TO-DO arreglar test de error y arreglar clase de forecast
+
 
     def test_forecast_error(self):
         serie = [1,1,1,1,1,1,1,1,1,]
         modelo = main.model(serie, True, [], False)
         modelo.get_arima()
-        forecast = modelo.forecast()
-        self.assertEquals(forecast, "error")
-
+        modelo.forecast(periods = 2)
+        forecast = modelo.predictions
+        self.assertEquals(forecast[0],np.array([float(0)]) )
+        print ("estimated model")
