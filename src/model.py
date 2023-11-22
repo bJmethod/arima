@@ -21,6 +21,8 @@ class model :
 ## en cualquier caso queda resuelta la posible customizacion
 ## TO-DO
 ## podemos agregmar estimacion por el test ADF
+## verificar que ande season false
+
 
     def get_arima(self) -> object:
         print(f" generating autoarima{self.auto}")

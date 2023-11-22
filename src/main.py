@@ -1,4 +1,4 @@
-from src.model import model
+from model import model
 import pandas as pd
 
 if __name__ == "__main__":
@@ -10,5 +10,8 @@ if __name__ == "__main__":
      model.get_arima()
      model.forecast(2)
      a += 1
+
+## log de un disclaimer
+## log al inicio al final
 
 
