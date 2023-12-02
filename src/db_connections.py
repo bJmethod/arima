@@ -38,8 +38,27 @@ def get_data_forecast(conn,anio_desde, anio_hasta,id_numerico ):
             """
     df = pd.read_sql(get_data_query, conn)
     return df
+def update_model_spec_query(valor_ar, valor_i,valor_ma,id_numerico, indice):
+    query = f'''
+    update confarimaresultado set confarimaar={valor_ar},
+    confarimai= {valor_i}, confarimama= {valor_ma},
+    where  confarimacabezalid= {id_numerico} and
+    confarimaindice= {indice}
+    '''
+    return query
+def update_valor_forecast(valor,id_numerico,indice):
+    ## this function can update the bd of forecast
+    # so if i have
+    # {"month": [1, 2], "valor": forecast} update -> bd
 
-
+    query = f''' 
+        update confarimamodeloaplicado
+        set confarimamodeloaplicadoprocesa=TRUE,
+        confarimamodeloaplicadoporc={valor}
+        and confarimacabezalid={id_numerico} and
+        confarimamodeloaplicadoindice= {indice};
+    '''
+    return query
 def get_conn(host, db, user, password):
     print("conecting to db..")
     conexion = psycopg2.connect(host=host, database=db, user=user, password=password)
@@ -56,5 +75,10 @@ def get_data(host, db, user, password, id_numerico):
     return {"data": df,
             "ind_proyeccion": pr_time}
 
+def do_update():
+    #completar estos dos metodos
+    do_update_model_specs()
+    do_update_valor()
+    pass
            # get_data(host, db, user, password, id_numerico)->{"data": df -> data to  learn,
            #  "ind_proyeccion": pr_time -> time to forecast}

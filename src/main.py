@@ -3,6 +3,7 @@ from sensitive import sensitive_dict
 from db_connections import get_data
 import pandas as pd
 
+
 if __name__ == "__main__":
      df = pd.read_excel("C:/Users/Usuario/Documents/Arima.xlsx", skiprows=1)
      Xt = df[['Ejecución Comprometida']].copy()
@@ -13,6 +14,7 @@ if __name__ == "__main__":
      model.forecast(2)
      forecast = model.predictions
      new_Data =  pd.DataFrame({"month":[1,2],"valor": forecast})
+
      a += 1
      # sensitive_data = sensitive_dict()
      # user = sensitive_data["usr"]
