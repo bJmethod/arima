@@ -1,15 +1,6 @@
 import psycopg2
 import pandas as pd
-HOST= "host"
-DB= "db"
-USER = "user"
-PASSWORD= "pss"
-id_numerico = 21
 
-
-
-anio_desde = 21
-anio_hasta= 21
 
 
 def get_to_from(conn, id_numerico):
@@ -74,11 +65,21 @@ def get_data(host, db, user, password, id_numerico):
     pr_time = get_forecast_year(conn,id_numerico)
     return {"data": df,
             "ind_proyeccion": pr_time}
+def __do_update(conn,query,id_numerico,type):
+    cur = conn.cursor()
+    cur.execute(query)
+    print(f"updated {type} {id_numerico}")
 
-def do_update():
+def load_forecast_info(conn,id_numerico,valor_ar, valor_i,valor_ma, indice):
     #completar estos dos metodos
-    do_update_model_specs()
-    do_update_valor()
-    pass
+    update_espec_query = update_model_spec_query(valor_ar, valor_i,valor_ma,id_numerico, indice)
+    __do_update(conn,update_espec_query,id_numerico,'specs')
+    print(f"finish load model info for {id_numerico}")
+
+
+def load_forecast_values(conn, id_numerico:int, indice:str, valores: list) :
+    for valor in valores:
+        query_update_forcast = update_valor_forecast(valor, id_numerico, indice)
+        __do_update(conn,query_update_forcast, id_numerico,'update_forecast')
            # get_data(host, db, user, password, id_numerico)->{"data": df -> data to  learn,
            #  "ind_proyeccion": pr_time -> time to forecast}
