@@ -55,8 +55,8 @@ def get_conn(host, db, user, password):
     conexion = psycopg2.connect(host=host, database=db, user=user, password=password)
     return conexion
 
-def get_data(host, db, user, password, id_numerico):
-    conn = get_conn(host, db, user, password)
+def get_data(conn, id_numerico):
+
     forecast_year = get_forecast_year(conn, id_numerico)
     # forecast_year -> {"aniodesde":[1],"aniohasta":[2]}
     anio_desde= forecast_year.aniodesde[0]
