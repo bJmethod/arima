@@ -1,6 +1,11 @@
 import psycopg2
 import pandas as pd
 
+## respuesta de gpeto
+
+import pandas as pd
+from sqlalchemy import create_engine
+import psycopg2
 
 
 def get_to_from(conn, id_numerico):
@@ -37,23 +42,33 @@ def update_model_spec_query(valor_ar, valor_i,valor_ma,id_numerico, indice):
     confarimaindice= {indice}
     '''
     return query
-def update_valor_forecast(valor,id_numerico,indice):
+
+
+def update_valor_forecast( valor, id_numerico, indice, anio, mes):
     ## this function can update the bd of forecast
     # so if i have
     # {"month": [1, 2], "valor": forecast} update -> bd
 
     query = f''' 
         update confarimamodeloaplicado
-        set confarimamodeloaplicadoprocesa=TRUE,
+        set procesado=TRUE,
         confarimamodeloaplicadoporc={valor}
-        and confarimacabezalid={id_numerico} and
-        confarimamodeloaplicadoindice= {indice};
+        where confarimacabezalid={id_numerico} and
+        confarimamodeloaplicadoindice= {indice}
+        and confarimamodeloaplicadoanio = {anio} and confarimamodeloaplicadomes = {mes}
+
     '''
+    ######################################################################################
+    ##### GABRIEL: falta agregar esto a el query de arriba
+    ##### and confarimamodeloaplicadoanio = 2031 and confarimamodeloaplicadomes = 3
+    ##### GABRIEL: aca puse 2031 y 3, pero deberian de ser el mes y año del resultado
+    print(f"update_valor_forecast={query}")
     return query
 def get_conn(host, db, user, password):
     print("conecting to db..")
     conexion = psycopg2.connect(host=host, database=db, user=user, password=password)
-    return conexion
+    engine = create_engine('postgresql+psycopg2://', creator=lambda: conexion)
+    return engine
 
 def get_data(conn, id_numerico):
 

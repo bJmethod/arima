@@ -7,10 +7,11 @@ from db_connections import get_data, get_conn,load_forecast_info,load_forecast_v
 user = sensitive_dict()['usr']
 password = sensitive_dict()['password']
 host = sensitive_dict()['host']
-db = sys.argv[0]
-id_numerico= sys.argv[1]
-indice = sys.argv[2]
+port = sensitive_dict()['puerto']
+db = sensitive_dict()['db']
 
+id_numerico= sys.argv[0]
+indice = sys.argv[1]
 conn = get_conn(host, db, user, password)
 
 d = get_data(conn, id_numerico)
