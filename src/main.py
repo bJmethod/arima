@@ -3,33 +3,33 @@ from model import model
 from sensitive import sensitive_dict
 from db_connections import get_data, get_conn,load_forecast_info,load_forecast_values
 
-if __name__ == "__main__":
-    user = sensitive_dict()['usr']
-    password = sensitive_dict()['password']
-    host = sensitive_dict()['host']
-    port = sensitive_dict()['puerto']
-    db = sensitive_dict()['db']
 
-    id_numerico= 123#sys.argv[0]
-    indice = 123#sys.argv[1]
-    conn = get_conn(host, db, user, password,port)
+user = sensitive_dict()['usr']
+password = sensitive_dict()['password']
+host = sensitive_dict()['host']
+port = sensitive_dict()['puerto']
+db = sensitive_dict()['db']
 
-    d = get_data(conn, id_numerico)
+id_numerico= sys.argv[0]
+indice = sys.argv[1]
+conn = get_conn(host, db, user, password,port= 5432)
 
-    df = d['df']
-    ind_forecast = d["ind_proyeccion"]
-    Xt = df["valor"]
+d = get_data(conn, id_numerico)
 
-    ## estimate model
-    model = model(Xt, True, [], True)
-    model.get_arima()
-    steps = len(ind_forecast)
-    model.forecast(steps)
-    valores = model.predictions
-    valor_ar, valor_i, valor_ma = model.model.order
-    ## update values
-    load_forecast_info(conn,id_numerico,valor_ar, valor_i,valor_ma, indice)
-    load_forecast_values(conn, id_numerico, indice, valores)
+df = d['df']
+ind_forecast = d["ind_proyeccion"]
+Xt = df["valor"]
+
+## estimate model
+model = model(Xt, True, [], True)
+model.get_arima()
+steps = len(ind_forecast)
+model.forecast(steps)
+valores = model.predictions
+valor_ar, valor_i, valor_ma = model.model.order
+## update values
+load_forecast_info(conn,id_numerico,valor_ar, valor_i,valor_ma, indice)
+load_forecast_values(conn, id_numerico, indice, valores)
 
 
 ##test case
