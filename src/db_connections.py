@@ -64,9 +64,9 @@ def update_valor_forecast( valor, id_numerico, indice, anio, mes):
     ##### GABRIEL: aca puse 2031 y 3, pero deberian de ser el mes y año del resultado
     print(f"update_valor_forecast={query}")
     return query
-def get_conn(host, db, user, password):
+def get_conn(host, db, user, password,port):
     print("conecting to db..")
-    conexion = psycopg2.connect(host=host, database=db, user=user, password=password)
+    conexion = psycopg2.connect(host=host, database=db, user=user, password=password,port=port)
     engine = create_engine('postgresql+psycopg2://', creator=lambda: conexion)
     return engine
 
