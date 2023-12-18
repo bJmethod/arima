@@ -1,8 +1,3 @@
-import psycopg2
-import pandas as pd
-
-## respuesta de gpeto
-
 import pandas as pd
 from sqlalchemy import create_engine
 import psycopg2
@@ -19,25 +14,25 @@ def get_to_from(conn, id_numerico):
     return df
 def get_forecast_year(conn,id_numerico):
     get_to_from_forecast_query = f""" 
-        select confarimacabezalproyecciondesde as aniodesde, confarimacabezalproyeccionricohasta as aniohasta
+        select CONFARIMACABEZALPROYECCIONDESD as aniodesde, CONFARIMACABEZALPROYECCIONHAST as aniohasta
         from confarimacabezal
         where confarimacabezalid= {id_numerico} 
             """
 
     df = pd.read_sql(get_to_from_forecast_query, conn)
     return df
-def get_data_forecast(conn,anio_desde, anio_hasta,id_numerico ):
-    get_data_query = f""""
-            select anionro as anio, datoshistoricoejincmes as mes, datoshistoricoejinccredvi as valor
-            from datoshistoricoejinc
-            where anionro >= {anio_desde} and anionro<= {anio_hasta} and datoshistoricoejincindice = {id_numerico}
+def get_data_forecast(conn,anio_desde, anio_hasta,indice ):
+    get_data_query = f"""
+            select anionro as anio, HISTORICOMES as mes, HISTORICOCREDVIG  as valor
+            from HISTORICO
+            where anionro >= {anio_desde} and anionro<= {anio_hasta} and HISTORICOINDICE = {indice} order by anio,mes
             """
     df = pd.read_sql(get_data_query, conn)
     return df
 def update_model_spec_query(valor_ar, valor_i,valor_ma,id_numerico, indice):
     query = f'''
     update confarimaresultado set confarimaar={valor_ar},
-    confarimai= {valor_i}, confarimama= {valor_ma},
+    confarimai= {valor_i}, confarimama= {valor_ma}
     where  confarimacabezalid= {id_numerico} and
     confarimaindice= {indice}
     '''
@@ -67,25 +62,30 @@ def update_valor_forecast( valor, id_numerico, indice, anio, mes):
 def get_conn(host, db, user, password,port):
     print("conecting to db..")
     conexion = psycopg2.connect(host=host, database=db, user=user, password=password,port=port)
-    engine = create_engine('postgresql+psycopg2://', creator=lambda: conexion)
+
+    return conexion
+def get_engine(conn):
+    engine = create_engine('postgresql+psycopg2://', creator=lambda: connn)
     return engine
+def get_data(conn, id_numerico,indice):
 
-def get_data(conn, id_numerico):
-
-    forecast_year = get_forecast_year(conn, id_numerico)
+    forecast_year = get_to_from(conn, id_numerico) # GABRIEL de aca se saca desde y hasta a tomar del historico
     # forecast_year -> {"aniodesde":[1],"aniohasta":[2]}
     anio_desde= forecast_year.aniodesde[0]
     anio_hasta = forecast_year.aniohasta[0]
-    df = get_data_forecast(conn, anio_desde, anio_hasta, id_numerico)
-    pr_time = get_forecast_year(conn,id_numerico)
+    print(f"anio_desde historico = {anio_desde}")
+    print(f"anio_hasta historico = {anio_hasta}")
+    df = get_data_forecast(conn, anio_desde, anio_hasta, indice) ## GABRIEL se pasa indice para obtener los datos del historico
+    pr_time = get_forecast_year(conn,id_numerico) #GABROEÑ esta bien pasar el id, que es la clave en el cabezal arima
     return {"data": df,
             "ind_proyeccion": pr_time}
 def __do_update(conn,query,id_numerico,type):
     cur = conn.cursor()
     cur.execute(query)
     print(f"updated {type} {id_numerico}")
+    print(f" update query {query}")
 
-def load_forecast_info(conn,id_numerico,valor_ar, valor_i,valor_ma, indice):
+def load_forecast_info(conn,id_numerico: int ,valor_ar: int, valor_i:int,valor_ma: int, indice:str):
     #completar estos dos metodos
     update_espec_query = update_model_spec_query(valor_ar, valor_i,valor_ma,id_numerico, indice)
     __do_update(conn,update_espec_query,id_numerico,'specs')

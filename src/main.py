@@ -1,7 +1,8 @@
 import sys
 from model import model
 from sensitive import sensitive_dict
-from db_connections import get_data, get_conn,load_forecast_info,load_forecast_values
+
+from db_connections import get_data, get_conn,load_forecast_info,load_forecast_values, get_engine
 
 
 user = sensitive_dict()['usr']
@@ -10,15 +11,21 @@ host = sensitive_dict()['host']
 port = sensitive_dict()['puerto']
 db = sensitive_dict()['db']
 
-id_numerico= sys.argv[0]
-indice = sys.argv[1]
-conn = get_conn(host, db, user, password,port= 5432)
+id_numerico= sys.argv[1]
+indice = sys.argv[2]
+conn = get_conn(host, db, user, password,port)
+engine =get_engine(conn)
+d = get_data(engine, id_numerico,indice)  # GABRIEL, se debe de pasar ambos, el id, para obtener desde y hasta para obtener datos del historico, y
+                                        # año desde y hasta de la proyeccion, eso desde el cabezal arima, y luego indic
 
-d = get_data(conn, id_numerico)
-
-df = d['df']
+df = d['data']
 ind_forecast = d["ind_proyeccion"]
 Xt = df["valor"]
+print(f"CABEZAL ARIMA = {id_numerico}")
+print(f"INDICE =  {indice}")
+print(f"DATA ={df}")
+print(f"IND_FOR = {ind_forecast}")
+print(f"XT =  {Xt}")
 
 ## estimate model
 model = model(Xt, True, [], True)
@@ -28,8 +35,10 @@ model.forecast(steps)
 valores = model.predictions
 valor_ar, valor_i, valor_ma = model.model.order
 ## update values
-load_forecast_info(conn,id_numerico,valor_ar, valor_i,valor_ma, indice)
-load_forecast_values(conn, id_numerico, indice, valores)
+
+id = int(id_numerico)
+load_forecast_info(conn,id,valor_ar, valor_i,valor_ma, indice)
+load_forecast_values(conn, id, indice, valores)
 
 
 ##test case

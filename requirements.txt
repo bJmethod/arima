@@ -8,3 +8,5 @@ pmdarima == 2.0.3
 psycopg2_binary == 2.9.9
 openpyxl == 3.1.2
 PyGreSQL == 6.0
+scipy==1.10.1
+sqlalchemy==1.4.39
