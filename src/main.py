@@ -3,7 +3,7 @@ from model import model
 from sensitive import sensitive_dict
 
 from db_connections import get_data, get_conn,load_forecast_info,load_forecast_values, get_engine
-
+import logging
 
 user = sensitive_dict()['usr']
 password = sensitive_dict()['password']
@@ -11,8 +11,12 @@ host = sensitive_dict()['host']
 port = sensitive_dict()['puerto']
 db = sensitive_dict()['db']
 
+
 id_numerico= sys.argv[1]
 indice = sys.argv[2]
+
+logging.basicConfig(filename=f'{id_numerico}_arima.log.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+
 conn = get_conn(host, db, user, password,port)
 engine =get_engine(conn)
 d = get_data(engine, id_numerico,indice)  # GABRIEL, se debe de pasar ambos, el id, para obtener desde y hasta para obtener datos del historico, y
@@ -23,22 +27,29 @@ ind_forecast = d["ind_proyeccion"]
 Xt = df["valor"]
 print(f"CABEZAL ARIMA = {id_numerico}")
 print(f"INDICE =  {indice}")
-print(f"DATA ={df}")
+#print(f"DATA ={df}")
 print(f"IND_FOR = {ind_forecast}")
-print(f"XT =  {Xt}")
+#print(f"XT =  {Xt}")
 
 ## estimate model
 model = model(Xt, True, [], True)
 model.get_arima()
-steps = len(ind_forecast)
+
+
+## esto está arrojando un vector de forecast tamaño 2 y deberia ser tamaño 18
+steps = len(ind_forecast.aniohasta.values )*18
+mes = range(18)
+print(f"forcasting for {steps} preiods ahead")
 model.forecast(steps)
 valores = model.predictions
+anio = ind_forecast.aniohasta.values[0]
 valor_ar, valor_i, valor_ma = model.model.order
 ## update values
 
 id = int(id_numerico)
 load_forecast_info(conn,id,valor_ar, valor_i,valor_ma, indice)
-load_forecast_values(conn, id, indice, valores)
+print(f"update for id {id} valores {valores}")
+load_forecast_values(conn, id, indice, valores.values,anio ,mes)
 
 
 ##test case

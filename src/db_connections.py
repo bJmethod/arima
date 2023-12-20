@@ -1,7 +1,7 @@
 import pandas as pd
 from sqlalchemy import create_engine
 import psycopg2
-
+import logging
 
 def get_to_from(conn, id_numerico):
 
@@ -65,10 +65,10 @@ def get_conn(host, db, user, password,port):
 
     return conexion
 def get_engine(conn):
-    engine = create_engine('postgresql+psycopg2://', creator=lambda: connn)
+    engine = create_engine('postgresql+psycopg2://', creator=lambda: conn)
     return engine
 def get_data(conn, id_numerico,indice):
-
+    logging.info(f'getting data for {id_numerico}')
     forecast_year = get_to_from(conn, id_numerico) # GABRIEL de aca se saca desde y hasta a tomar del historico
     # forecast_year -> {"aniodesde":[1],"aniohasta":[2]}
     anio_desde= forecast_year.aniodesde[0]
@@ -76,11 +76,14 @@ def get_data(conn, id_numerico,indice):
     print(f"anio_desde historico = {anio_desde}")
     print(f"anio_hasta historico = {anio_hasta}")
     df = get_data_forecast(conn, anio_desde, anio_hasta, indice) ## GABRIEL se pasa indice para obtener los datos del historico
+    logging.info(f'finishing geting data {anio_desde} {anio_hasta} and indice {indice}')
     pr_time = get_forecast_year(conn,id_numerico) #GABROEÑ esta bien pasar el id, que es la clave en el cabezal arima
+    logging.info(f' years for fore cast {pr_time}')
     return {"data": df,
             "ind_proyeccion": pr_time}
 def __do_update(conn,query,id_numerico,type):
     cur = conn.cursor()
+    logging.info(f'updating with {query} for {id_numerico}')
     cur.execute(query)
     print(f"updated {type} {id_numerico}")
     print(f" update query {query}")
@@ -92,9 +95,16 @@ def load_forecast_info(conn,id_numerico: int ,valor_ar: int, valor_i:int,valor_m
     print(f"finish load model info for {id_numerico}")
 
 
-def load_forecast_values(conn, id_numerico:int, indice:str, valores: list) :
-    for valor in valores:
-        query_update_forcast = update_valor_forecast(valor, id_numerico, indice)
-        __do_update(conn,query_update_forcast, id_numerico,'update_forecast')
+def load_forecast_values(conn, id_numerico:int, indice:str, valores: list, anio,mes: object) :
+    for l in mes:
+        m = l+1
+        ##redondeamos millones
+        valor = round(valores[l]/1000000,13)
+        print(valor, id_numerico,  indice, m )
+        anio = int(anio)
+        update_valor_forecast(valor, id_numerico, indice, anio, mes)
+        query_update_forcast = update_valor_forecast(valor, id_numerico, indice,anio, mes = m)
+
+        __do_update(conn,query_update_forcast, id_numerico ,'update_forecast')
            # get_data(host, db, user, password, id_numerico)->{"data": df -> data to  learn,
            #  "ind_proyeccion": pr_time -> time to forecast}
