@@ -85,6 +85,7 @@ def __do_update(conn,query,id_numerico,type):
     cur = conn.cursor()
     logging.info(f'updating with {query} for {id_numerico}')
     cur.execute(query)
+    conn.commit()
     print(f"updated {type} {id_numerico}")
     print(f" update query {query}")
 
