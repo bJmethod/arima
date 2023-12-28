@@ -23,7 +23,7 @@ def get_forecast_year(conn,id_numerico):
     return df
 def get_data_forecast(conn,anio_desde, anio_hasta,indice ):
     get_data_query = f"""
-            select anionro as anio, HISTORICOMES as mes, HISTORICOCREDVIG  as valor
+            select anionro as anio, HISTORICOMES as mes, historicoporccomp  as valor
             from HISTORICO
             where anionro >= {anio_desde} and anionro<= {anio_hasta} and HISTORICOINDICE = {indice} order by anio,mes
             """
@@ -100,7 +100,7 @@ def load_forecast_values(conn, id_numerico:int, indice:str, valores: list, anio,
     for l in mes:
         m = l+1
         ##redondeamos millones
-        valor = round(valores[l]/1000000,13)
+        valor = round(valores[l],13)
         print(valor, id_numerico,  indice, m )
         anio = int(anio)
         update_valor_forecast(valor, id_numerico, indice, anio, mes)

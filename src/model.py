@@ -97,9 +97,10 @@ class model :
           self.predictions = self.model.predict(
             n_periods = periods
             )
-        except:
-            print("no model was set or n periods ahead are unapropriate")
-        # to-do donde agrego
+        except  Exception as e:
+            print("no model was set or n periods ahead are unapropriate ")
+            print(f"exception raise {e}")
 
+        # to-do donde agrego
 
 

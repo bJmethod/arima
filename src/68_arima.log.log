@@ -930,3 +930,1557 @@
         and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 18
 
     
+2023-12-20 08:12:32,631 - INFO - getting data for 68
+2023-12-20 08:12:32,826 - INFO - finishing geting data 2022 2023 and indice 5
+2023-12-20 08:12:32,838 - INFO -  years for fore cast    aniodesde  aniohasta
+0       2024       2028
+2023-12-20 08:12:45,010 - INFO - updating with 
+    update confarimaresultado set confarimaar=0,
+    confarimai= 0, confarimama= 1
+    where  confarimacabezalid= 68 and
+    confarimaindice= 5
+     for 68
+2023-12-20 08:12:45,025 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=63.2900933624095
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 1
+
+     for 68
+2023-12-20 08:12:45,036 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=627.7406894966846
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 2
+
+     for 68
+2023-12-20 08:12:45,039 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=1201.3592313428117
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 3
+
+     for 68
+2023-12-20 08:12:45,042 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=3.1830807012909
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 4
+
+     for 68
+2023-12-20 08:12:45,044 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=212.9863400803643
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 5
+
+     for 68
+2023-12-20 08:12:45,047 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=1.3629080317716
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 6
+
+     for 68
+2023-12-20 08:12:45,052 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=10.9942217437446
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+     for 68
+2023-12-20 08:12:45,055 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.4168021815186
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 8
+
+     for 68
+2023-12-20 08:12:45,057 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=342.3771599340214
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 9
+
+     for 68
+2023-12-20 08:12:45,060 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=14.1092594601336
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 10
+
+     for 68
+2023-12-20 08:12:45,063 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=30.646508162285
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 11
+
+     for 68
+2023-12-20 08:12:45,066 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=2.0088211411603
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 12
+
+     for 68
+2023-12-20 08:12:45,069 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=47.1923394638782
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 13
+
+     for 68
+2023-12-20 08:12:45,071 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=460.5859339255866
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 14
+
+     for 68
+2023-12-20 08:12:45,074 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=879.84524367288
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 15
+
+     for 68
+2023-12-20 08:12:45,077 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=5.044292613704
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 16
+
+     for 68
+2023-12-20 08:12:45,080 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-351.79926694508
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 17
+
+     for 68
+2023-12-20 08:12:45,083 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=2.8551267866903
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 18
+
+     for 68
+2023-12-21 19:53:34,113 - INFO - getting data for 68
+2023-12-21 19:53:34,245 - INFO - finishing geting data 2022 2023 and indice 5
+2023-12-21 19:53:34,256 - INFO -  years for fore cast    aniodesde  aniohasta
+0       2024       2028
+2023-12-21 19:53:34,449 - INFO - updating with 
+    update confarimaresultado set confarimaar=0,
+    confarimai= 0, confarimama= 0
+    where  confarimacabezalid= 68 and
+    confarimaindice= 5
+     for 68
+2023-12-21 19:53:34,465 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 1
+
+     for 68
+2023-12-21 19:53:34,475 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 2
+
+     for 68
+2023-12-21 19:53:34,477 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 3
+
+     for 68
+2023-12-21 19:53:34,479 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 4
+
+     for 68
+2023-12-21 19:53:34,481 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 5
+
+     for 68
+2023-12-21 19:53:34,483 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 6
+
+     for 68
+2023-12-21 19:53:34,485 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+     for 68
+2023-12-21 19:53:34,487 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 8
+
+     for 68
+2023-12-21 19:53:34,489 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 9
+
+     for 68
+2023-12-21 19:53:34,491 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 10
+
+     for 68
+2023-12-21 19:53:34,493 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 11
+
+     for 68
+2023-12-21 19:53:34,494 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 12
+
+     for 68
+2023-12-21 19:53:34,496 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 13
+
+     for 68
+2023-12-21 19:53:34,498 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 14
+
+     for 68
+2023-12-21 19:53:34,500 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 15
+
+     for 68
+2023-12-21 19:53:34,502 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 16
+
+     for 68
+2023-12-21 19:53:34,504 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 17
+
+     for 68
+2023-12-21 19:53:34,506 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 18
+
+     for 68
+2023-12-21 19:54:23,068 - INFO - getting data for 68
+2023-12-21 19:54:23,181 - INFO - finishing geting data 2022 2023 and indice 5
+2023-12-21 19:54:23,190 - INFO -  years for fore cast    aniodesde  aniohasta
+0       2024       2028
+2023-12-21 19:54:23,260 - INFO - updating with 
+    update confarimaresultado set confarimaar=0,
+    confarimai= 0, confarimama= 0
+    where  confarimacabezalid= 68 and
+    confarimaindice= 5
+     for 68
+2023-12-21 19:54:23,269 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 1
+
+     for 68
+2023-12-21 19:54:23,274 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 2
+
+     for 68
+2023-12-21 19:54:23,276 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 3
+
+     for 68
+2023-12-21 19:54:23,278 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 4
+
+     for 68
+2023-12-21 19:54:23,280 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 5
+
+     for 68
+2023-12-21 19:54:23,282 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 6
+
+     for 68
+2023-12-21 19:54:23,283 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+     for 68
+2023-12-21 19:54:23,285 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 8
+
+     for 68
+2023-12-21 19:54:23,287 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 9
+
+     for 68
+2023-12-21 19:54:23,289 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 10
+
+     for 68
+2023-12-21 19:54:23,290 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 11
+
+     for 68
+2023-12-21 19:54:23,292 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 12
+
+     for 68
+2023-12-21 19:54:23,293 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 13
+
+     for 68
+2023-12-21 19:54:23,295 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 14
+
+     for 68
+2023-12-21 19:54:23,296 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 15
+
+     for 68
+2023-12-21 19:54:23,298 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 16
+
+     for 68
+2023-12-21 19:54:23,300 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 17
+
+     for 68
+2023-12-21 19:54:23,301 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 18
+
+     for 68
+2023-12-21 19:55:21,821 - INFO - getting data for 68
+2023-12-21 19:55:21,926 - INFO - finishing geting data 2022 2023 and indice 5
+2023-12-21 19:55:21,934 - INFO -  years for fore cast    aniodesde  aniohasta
+0       2024       2028
+2023-12-21 19:55:22,008 - INFO - updating with 
+    update confarimaresultado set confarimaar=0,
+    confarimai= 0, confarimama= 0
+    where  confarimacabezalid= 68 and
+    confarimaindice= 5
+     for 68
+2023-12-21 19:55:22,016 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 1
+
+     for 68
+2023-12-21 19:55:22,023 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 2
+
+     for 68
+2023-12-21 19:55:22,025 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 3
+
+     for 68
+2023-12-21 19:55:22,027 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 4
+
+     for 68
+2023-12-21 19:55:22,028 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 5
+
+     for 68
+2023-12-21 19:55:22,030 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 6
+
+     for 68
+2023-12-21 19:55:22,032 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+     for 68
+2023-12-21 19:55:22,034 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 8
+
+     for 68
+2023-12-21 19:55:22,035 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 9
+
+     for 68
+2023-12-21 19:55:22,037 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 10
+
+     for 68
+2023-12-21 19:55:22,038 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 11
+
+     for 68
+2023-12-21 19:55:22,040 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 12
+
+     for 68
+2023-12-21 19:55:22,041 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 13
+
+     for 68
+2023-12-21 19:55:22,043 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 14
+
+     for 68
+2023-12-21 19:55:22,045 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 15
+
+     for 68
+2023-12-21 19:55:22,047 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 16
+
+     for 68
+2023-12-21 19:55:22,049 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 17
+
+     for 68
+2023-12-21 19:55:22,051 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 18
+
+     for 68
+2023-12-27 11:27:19,273 - INFO - getting data for 68
+2023-12-27 11:27:19,391 - INFO - finishing geting data 2022 2023 and indice 5
+2023-12-27 11:27:19,403 - INFO -  years for fore cast    aniodesde  aniohasta
+0       2024       2028
+2023-12-27 11:30:35,255 - INFO - getting data for 68
+2023-12-27 11:30:35,360 - INFO - finishing geting data 2022 2023 and indice 5
+2023-12-27 11:30:35,368 - INFO -  years for fore cast    aniodesde  aniohasta
+0       2024       2028
+2023-12-27 11:32:49,241 - INFO - getting data for 68
+2023-12-27 11:32:49,277 - INFO - finishing geting data 2022 2023 and indice 5
+2023-12-27 11:33:26,404 - INFO - getting data for 68
+2023-12-27 11:33:26,439 - INFO - finishing geting data 2022 2023 and indice 5
+2023-12-27 11:33:26,460 - INFO -  years for fore cast    aniodesde  aniohasta
+0       2024       2028
+2023-12-27 11:34:26,868 - INFO - getting data for 68
+2023-12-27 11:34:26,904 - INFO - finishing geting data 2022 2023 and indice 5
+2023-12-27 11:34:26,924 - INFO -  years for fore cast    aniodesde  aniohasta
+0       2024       2028
+2023-12-27 11:49:23,021 - INFO - getting data for 68
+2023-12-27 11:49:23,125 - INFO - finishing geting data 2022 2023 and indice 5
+2023-12-27 11:49:23,134 - INFO -  years for fore cast    aniodesde  aniohasta
+0       2024       2028
+2023-12-27 11:54:50,889 - INFO - getting data for 68
+2023-12-27 11:54:50,992 - INFO - finishing geting data 2022 2023 and indice 5
+2023-12-27 11:54:51,000 - INFO -  years for fore cast    aniodesde  aniohasta
+0       2024       2028
+2023-12-27 11:56:31,023 - INFO - getting data for 68
+2023-12-27 11:56:31,129 - INFO - finishing geting data 2022 2023 and indice 5
+2023-12-27 11:56:31,138 - INFO -  years for fore cast    aniodesde  aniohasta
+0       2024       2028
+2023-12-27 11:57:19,135 - INFO - updating with 
+    update confarimaresultado set confarimaar=0,
+    confarimai= 0, confarimama= 0
+    where  confarimacabezalid= 68 and
+    confarimaindice= 5
+     for 68
+2023-12-27 11:58:12,995 - INFO - getting data for 68
+2023-12-27 11:58:13,105 - INFO - finishing geting data 2022 2023 and indice 5
+2023-12-27 11:58:13,114 - INFO -  years for fore cast    aniodesde  aniohasta
+0       2024       2028
+2023-12-27 11:58:21,468 - INFO - updating with 
+    update confarimaresultado set confarimaar=0,
+    confarimai= 0, confarimama= 0
+    where  confarimacabezalid= 68 and
+    confarimaindice= 5
+     for 68
+2023-12-28 10:06:14,976 - INFO - getting data for 68
+2023-12-28 10:06:15,225 - INFO - finishing geting data 2022 2023 and indice 5
+2023-12-28 10:06:15,240 - INFO -  years for fore cast    aniodesde  aniohasta
+0       2024       2028
+2023-12-28 10:06:29,140 - INFO - updating with 
+    update confarimaresultado set confarimaar=0,
+    confarimai= 0, confarimama= 0
+    where  confarimacabezalid= 68 and
+    confarimaindice= 5
+     for 68
+2023-12-28 10:06:29,159 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-995.9950437721192
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 2
+
+     for 68
+2023-12-28 10:06:29,181 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-1598.202872024896
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 3
+
+     for 68
+2023-12-28 10:06:29,184 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-0.1988007832982
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 4
+
+     for 68
+2023-12-28 10:06:29,189 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.2301561790226
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 5
+
+     for 68
+2023-12-28 10:06:29,193 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-1286.2088450117888
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 6
+
+     for 68
+2023-12-28 10:06:29,196 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-16.6097260994168
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 7
+
+     for 68
+2023-12-28 10:06:29,200 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=203.0283828200687
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 8
+
+     for 68
+2023-12-28 10:06:29,204 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=18.2368947841599
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 9
+
+     for 68
+2023-12-28 10:06:29,208 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0902472164336
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 10
+
+     for 68
+2023-12-28 10:06:29,212 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=127.4661344181209
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 11
+
+     for 68
+2023-12-28 10:06:29,215 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=12.5259967540324
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 12
+
+     for 68
+2023-12-28 10:06:29,219 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=3.2817002379472
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 13
+
+     for 68
+2023-12-28 10:06:29,223 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-998.0244526714572
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 14
+
+     for 68
+2023-12-28 10:06:29,227 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-1210.0371827828703
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 15
+
+     for 68
+2023-12-28 10:06:29,231 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-0.0107075271769
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 16
+
+     for 68
+2023-12-28 10:06:29,234 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.4593990043411
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 17
+
+     for 68
+2023-12-28 10:06:29,238 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-1289.8797593312543
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 18
+
+     for 68
+2023-12-28 10:06:29,242 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-15.4627781142612
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 19
+
+     for 68
+2023-12-28 10:06:29,245 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-995.9950437721192
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 2
+
+     for 68
+2023-12-28 10:06:29,249 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-1598.202872024896
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 3
+
+     for 68
+2023-12-28 10:06:29,252 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-0.1988007832982
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 4
+
+     for 68
+2023-12-28 10:06:29,255 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.2301561790226
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 5
+
+     for 68
+2023-12-28 10:06:29,258 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-1286.2088450117888
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 6
+
+     for 68
+2023-12-28 10:06:29,262 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-16.6097260994168
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 7
+
+     for 68
+2023-12-28 10:06:29,265 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=203.0283828200687
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 8
+
+     for 68
+2023-12-28 10:06:29,268 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=18.2368947841599
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 9
+
+     for 68
+2023-12-28 10:06:29,271 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0902472164336
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 10
+
+     for 68
+2023-12-28 10:06:29,274 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=127.4661344181209
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 11
+
+     for 68
+2023-12-28 10:06:29,277 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=12.5259967540324
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 12
+
+     for 68
+2023-12-28 10:06:29,281 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=3.2817002379472
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 13
+
+     for 68
+2023-12-28 10:06:29,284 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-998.0244526714572
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 14
+
+     for 68
+2023-12-28 10:06:29,287 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-1210.0371827828703
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 15
+
+     for 68
+2023-12-28 10:06:29,290 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-0.0107075271769
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 16
+
+     for 68
+2023-12-28 10:06:29,293 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.4593990043411
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 17
+
+     for 68
+2023-12-28 10:06:29,297 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-1289.8797593312543
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 18
+
+     for 68
+2023-12-28 10:06:29,301 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-15.4627781142612
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 19
+
+     for 68
+2023-12-28 10:06:29,304 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-995.9950437721192
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 2
+
+     for 68
+2023-12-28 10:06:29,309 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-1598.202872024896
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 3
+
+     for 68
+2023-12-28 10:06:29,314 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-0.1988007832982
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 4
+
+     for 68
+2023-12-28 10:06:29,319 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.2301561790226
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 5
+
+     for 68
+2023-12-28 10:06:29,323 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-1286.2088450117888
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 6
+
+     for 68
+2023-12-28 10:06:29,327 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-16.6097260994168
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 7
+
+     for 68
+2023-12-28 10:06:29,332 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=203.0283828200687
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 8
+
+     for 68
+2023-12-28 10:06:29,336 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=18.2368947841599
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 9
+
+     for 68
+2023-12-28 10:06:29,341 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0902472164336
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 10
+
+     for 68
+2023-12-28 10:06:29,345 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=127.4661344181209
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 11
+
+     for 68
+2023-12-28 10:06:29,349 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=12.5259967540324
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 12
+
+     for 68
+2023-12-28 10:06:29,353 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=3.2817002379472
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 13
+
+     for 68
+2023-12-28 10:06:29,357 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-998.0244526714572
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 14
+
+     for 68
+2023-12-28 10:06:29,362 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-1210.0371827828703
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 15
+
+     for 68
+2023-12-28 10:06:29,366 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-0.0107075271769
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 16
+
+     for 68
+2023-12-28 10:06:29,370 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.4593990043411
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 17
+
+     for 68
+2023-12-28 10:06:29,374 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-1289.8797593312543
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 18
+
+     for 68
+2023-12-28 10:06:29,379 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-15.4627781142612
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 19
+
+     for 68
+2023-12-28 10:06:29,383 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-995.9950437721192
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 2
+
+     for 68
+2023-12-28 10:06:29,387 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-1598.202872024896
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 3
+
+     for 68
+2023-12-28 10:06:29,390 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-0.1988007832982
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 4
+
+     for 68
+2023-12-28 10:06:29,394 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.2301561790226
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 5
+
+     for 68
+2023-12-28 10:06:29,398 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-1286.2088450117888
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 6
+
+     for 68
+2023-12-28 10:06:29,402 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-16.6097260994168
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 7
+
+     for 68
+2023-12-28 10:06:29,406 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=203.0283828200687
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 8
+
+     for 68
+2023-12-28 10:06:29,411 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=18.2368947841599
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 9
+
+     for 68
+2023-12-28 10:06:29,415 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0902472164336
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 10
+
+     for 68
+2023-12-28 10:06:29,419 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=127.4661344181209
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 11
+
+     for 68
+2023-12-28 10:06:29,422 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=12.5259967540324
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 12
+
+     for 68
+2023-12-28 10:06:29,426 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=3.2817002379472
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 13
+
+     for 68
+2023-12-28 10:06:29,431 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-998.0244526714572
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 14
+
+     for 68
+2023-12-28 10:06:29,436 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-1210.0371827828703
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 15
+
+     for 68
+2023-12-28 10:06:29,440 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-0.0107075271769
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 16
+
+     for 68
+2023-12-28 10:06:29,444 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.4593990043411
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 17
+
+     for 68
+2023-12-28 10:06:29,447 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-1289.8797593312543
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 18
+
+     for 68
+2023-12-28 10:06:29,450 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-15.4627781142612
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 19
+
+     for 68
+2023-12-28 10:06:29,453 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-995.9950437721192
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 2
+
+     for 68
+2023-12-28 10:06:29,456 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-1598.202872024896
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 3
+
+     for 68
+2023-12-28 10:06:29,460 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-0.1988007832982
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 4
+
+     for 68
+2023-12-28 10:06:29,463 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.2301561790226
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 5
+
+     for 68
+2023-12-28 10:06:29,466 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-1286.2088450117888
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 6
+
+     for 68
+2023-12-28 10:06:29,469 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-16.6097260994168
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+     for 68
+2023-12-28 10:06:29,472 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=203.0283828200687
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 8
+
+     for 68
+2023-12-28 10:06:29,476 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=18.2368947841599
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 9
+
+     for 68
+2023-12-28 10:06:29,479 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.0902472164336
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 10
+
+     for 68
+2023-12-28 10:06:29,482 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=127.4661344181209
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 11
+
+     for 68
+2023-12-28 10:06:29,486 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=12.5259967540324
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 12
+
+     for 68
+2023-12-28 10:06:29,489 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=3.2817002379472
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 13
+
+     for 68
+2023-12-28 10:06:29,492 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-998.0244526714572
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 14
+
+     for 68
+2023-12-28 10:06:29,495 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-1210.0371827828703
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 15
+
+     for 68
+2023-12-28 10:06:29,498 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-0.0107075271769
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 16
+
+     for 68
+2023-12-28 10:06:29,502 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=0.4593990043411
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 17
+
+     for 68
+2023-12-28 10:06:29,505 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-1289.8797593312543
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 18
+
+     for 68
+2023-12-28 10:06:29,509 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-15.4627781142612
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 19
+
+     for 68
