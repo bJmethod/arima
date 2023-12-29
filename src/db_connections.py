@@ -73,8 +73,8 @@ def get_data(conn, id_numerico,indice):
     # forecast_year -> {"aniodesde":[1],"aniohasta":[2]}
     anio_desde= forecast_year.aniodesde[0]
     anio_hasta = forecast_year.aniohasta[0]
-    print(f"anio_desde historico = {anio_desde}")
-    print(f"anio_hasta historico = {anio_hasta}")
+    logging.info(f"anio_desde historico = {anio_desde}")
+    logging.info(f"anio_hasta historico = {anio_hasta}")
     df = get_data_forecast(conn, anio_desde, anio_hasta, indice) ## GABRIEL se pasa indice para obtener los datos del historico
     logging.info(f'finishing geting data {anio_desde} {anio_hasta} and indice {indice}')
     pr_time = get_forecast_year(conn,id_numerico) #GABROEÑ esta bien pasar el id, que es la clave en el cabezal arima
@@ -86,26 +86,25 @@ def __do_update(conn,query,id_numerico,type):
     logging.info(f'updating with {query} for {id_numerico}')
     cur.execute(query)
     conn.commit()
-    print(f"updated {type} {id_numerico}")
-    print(f" update query {query}")
+    logging.info(f"updated {type} {id_numerico}")
+    logging.info(f" update query {query}")
 
 def load_forecast_info(conn,id_numerico: int ,valor_ar: int, valor_i:int,valor_ma: int, indice:str):
     #completar estos dos metodos
     update_espec_query = update_model_spec_query(valor_ar, valor_i,valor_ma,id_numerico, indice)
     __do_update(conn,update_espec_query,id_numerico,'specs')
-    print(f"finish load model info for {id_numerico}")
+    logging.info( f"finish load model info for {id_numerico}")
 
 
-def load_forecast_values(conn, id_numerico:int, indice:str, valores: list, anio,mes: object) :
-    for l in mes:
-        m = l+1
+def load_forecast_values(conn, id_numerico:int, indice:str, valores: list, anio) :
+    for i, l in enumerate(valores):
+        m = int((l) % 18 +1 )
         ##redondeamos millones
-        valor = round(valores[l],13)
+        valor = round(valores[i],3)
         print(valor, id_numerico,  indice, m )
-        anio = int(anio)
-        update_valor_forecast(valor, id_numerico, indice, anio, mes)
-        query_update_forcast = update_valor_forecast(valor, id_numerico, indice,anio, mes = m)
-
+        anio_actual = int(anio + i // 18)
+        query_update_forcast = update_valor_forecast(valor, id_numerico, indice,anio_actual, mes = m)
         __do_update(conn,query_update_forcast, id_numerico ,'update_forecast')
+
            # get_data(host, db, user, password, id_numerico)->{"data": df -> data to  learn,
            #  "ind_proyeccion": pr_time -> time to forecast}

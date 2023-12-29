@@ -13,11 +13,10 @@ db = sensitive_dict()['db']
 
 
 def interpret_steps(aniodesde, aniohasta):
-    steps_ahead = int((aniohasta - aniodesde)*18)
+    steps_ahead = int((aniohasta - aniodesde + 1)*18)
     diff = aniohasta - aniodesde + 1
     years_forecast = [aniodesde + i for i in range(0, diff)]
-    months = [m+1 for m in range(0, 18)]
-    return {"steps": steps_ahead, "year_list": years_forecast, "months": months}
+    return {"steps": steps_ahead, "anio_desde": aniodesde}
 
 id_numerico= sys.argv[1]
 indice = sys.argv[2]
@@ -30,6 +29,7 @@ d = get_data(engine, id_numerico,indice)  # GABRIEL, se debe de pasar ambos, el 
                                         # año desde y hasta de la proyeccion, eso desde el cabezal arima, y luego indic
 
 df = d['data']
+print(f"HISTORICO = {df}")
 time_to_forecast = d["ind_proyeccion"]
 Xt = df["valor"]
 print(f"CABEZAL ARIMA = {id_numerico}")
@@ -48,10 +48,7 @@ anio_hasta = time_to_forecast.aniohasta.values[0]
 anio_desde = time_to_forecast.aniodesde.values[0]
 steps_interpreted = interpret_steps(anio_desde, anio_hasta)
 steps = steps_interpreted["steps"]
-months = steps_interpreted["months"]
-years = steps_interpreted["year_list"]
-
-print(f"forcasting for {steps} preiods ahead for years {years}")
+print(f"LOG= forcasting for {steps} preiods ahead from {anio_desde} to {anio_hasta} ")
 model.forecast(int(steps))
 valores = model.predictions
 
@@ -63,8 +60,7 @@ load_forecast_info(conn,id,valor_ar, valor_i,valor_ma, indice)
 print(f"update for id {id} valores {valores}")
 
 ## falta resolver esto porque hay que iterar sobre anio o pasarle una lista y resolverlo db(not so fan)
-for anio in years:
-    load_forecast_values(conn, id, indice, valores.values,anio , months)
+load_forecast_values(conn, id, indice, valores.values,anio_desde)
 
 
 ##test case
