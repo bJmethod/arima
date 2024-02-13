@@ -1,3 +1,5 @@
+import logging
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import statsmodels.api as sm
@@ -7,100 +9,129 @@ from statsmodels.tsa.stattools import adfuller, kpss
 import numpy as np
 import scipy.stats as stats
 from pmdarima.arima import auto_arima
+from pmdarima.arima.utils import nsdiffs
 
 
-class model :
-    def __init__(self,data, auto: bool,spec: list,season: bool):
+class model:
+    def __init__(self, data, auto: bool, spec: list, season: bool):
+        self.predictions = None
+        self.model_season = None
+        self.no_season = None
+        self.D = None
+        self.start = None
+        self.seasonal = None
+        self.params = None
+        self.max_d = None
+        self.max_order = None
         self.zt = data
         self.auto = auto
         self.spec = spec
         self.season = season
 
-## pensarán en especificar o querran la estimacion directo?
-## vamos a dejar que sea customisable si queremos directo el pronostico o queremos activarlo nosotros
-## en cualquier caso queda resuelta la posible customizacion
-## TO-DO
-## podemos agregmar estimacion por el test ADF
-## verificar que ande season false
+    def  get_minimum_spec_auto(self):
+        logging.info("geting total obs")
+        obs = len(self.zt)
+        D = nsdiffs(self.zt, m=12, max_D=3) if obs > 60 else None
+        try_season = True if obs > 36 else False
+        return D, try_season
 
 
     def get_arima(self) -> object:
+        ## todo hacer control de errores
         print(f" generating autoarima{self.auto}")
         if self.auto:
-            self.params= {
+            self.params = {
                 "autoarima": self.auto,
                 "specification": self.spec,
 
             }
-            self.max_order= 2
-            self.max_d =2
-            self.seasonal=False
+            D, try_season = self.get_minimum_spec_auto()
+            self.max_order = 4
+            self.max_d = 2
+            self.seasonal = False
             self.start = 1
-            self.D = 2
-            model_no_season = auto_arima(self.zt, start_p=self.start, start_q=self.start,
-                           max_p=self.max_order, max_q=self.max_order,
-                            seasonal= self.seasonal,
-                           max_d=self.max_d , trace=True,
-                           error_action='ignore',
-                           suppress_warnings=True,
-                           stepwise=True)
-            self.no_season = model_no_season
-            ## podemos agregar la estimacion de D con el metodo de canova
-            model_season = auto_arima(self.zt,
-                                        start_p=self.start,
-                                        start_q=self.start,
-                                        start_P=self.start,
-                                        D=self.D,
-                                        max_p=self.max_order,
-                                        max_q=self.max_order,
-                                        max_d=self.max_d,
-                                         m=12,
-                                         trace=True,
-                                         error_action='ignore',
-                                         suppress_warnings=True,
-                                         stepwise=True)
-            self.model_season = model_season
+            self.D =D
+            logging.info(f"estimating seasonal order using cannova-hansen test")
 
-            aic_season = self.model_season.aic()
+
+            try:
+                logging.info("estimating arima no season ")
+                model_no_season = auto_arima(self.zt, start_p=self.start, start_q=self.start,
+                                             max_p=self.max_order, max_q=self.max_order,
+                                             seasonal=self.seasonal,
+                                             trace=True,
+                                             error_action='ignore',
+                                             suppress_warnings=True,
+                                             stepwise=True)
+                self.no_season = model_no_season
+            except Exception as e:
+                logging.ERROR(f"model with no season was failed with exception {e}")
+
+            ## podemos agregar la estimacion de D con el metodo de canova
+
+            ## revisar aqui por qué rompe,
+            if try_season:
+                try:
+                    model_season = auto_arima(self.zt,
+                                              start_p=self.start,
+                                              start_q=self.start,
+                                              start_P=self.start,
+                                              D=self.D,
+                                              max_p=self.max_order,
+                                              max_q=self.max_order,
+                                              max_d=self.max_d,
+                                              m=12,
+                                              trace=True,
+                                              error_action='ignore',
+                                              suppress_warnings=True,
+                                              stepwise=True)
+                    self.model_season = model_season
+                except Exception as e:
+                    logging.ERROR(f"model with season has failed {e}")
+                aic_season = self.model_season.aic() if self.model_season else np.inf
+            else:
+                print("model hasn't enought obs to try seasnal spec")
+                logging.info(f"model hasn't enought obs {len(self.zt)} to try seasnal spec")
+                aic_season = np.infty
             aic_no_season = self.no_season.aic()
             if aic_season > aic_no_season:
                 self.model = self.no_season
+                logging.info(f"no season model was selected with aic{aic_no_season}")
             else:
                 self.model = self.model_season
+                logging.info(f"seasonal model was selected with aic{aic_season}")
         else:
-            if len(self.spec)>0:
+            if len(self.spec) > 0:
                 try:
                     if self.season:
-                       self.model= auto_arima(self.zt,
-                                   p = self.spec[0],
-                                   d = self.spec[1],
-                                   q = self.spec[2],
-                                   seasonal = self.season,
-                                   m=12
+                        self.model = auto_arima(self.zt,
+                                                p=self.spec[0],
+                                                d=self.spec[1],
+                                                q=self.spec[2],
+                                                seasonal=self.season,
+                                                m=12
 
-                        )
+                                                )
 
 
                     else:
                         self.model = auto_arima(self.zt,
-                                                  p=self.spec[0],
-                                                  d=self.spec[1],
-                                                  q=self.spec[2],
-                                                  seasonal=self.season,
-                                                  m=12
-                                                  )
+                                                p=self.spec[0],
+                                                d=self.spec[1],
+                                                q=self.spec[2],
+                                                seasonal=self.season,
+                                                m=12
+                                                )
                 except:
                     print(f"parameter set wornglty setted {self.params}")
 
-    def forecast(self, periods:int):
+    def forecast(self, periods: int):
         try:
-          self.predictions = self.model.predict(
-            n_periods = periods
+            self.predictions = self.model.predict(
+                n_periods=periods
             )
-        except  Exception as e:
+        except Exception as e:
             print("no model was set or n periods ahead are unapropriate ")
-            print(f"exception raise {e}")
+            logging.ERROR(f"exception raise {e}")
 
         # to-do donde agrego
-
-
