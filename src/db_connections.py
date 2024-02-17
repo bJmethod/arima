@@ -3,7 +3,7 @@ from sqlalchemy import create_engine
 import psycopg2
 import logging
 
-def get_to_from(conn, id_numerico):
+def get_to_from(conn, id_numerico) -> object:
 
     get_to_from_historic_query = f""" 
          select confarimacabezalhistoricodesde as aniodesde, confarimacabezalhistoricohasta as aniohasta
@@ -12,7 +12,7 @@ def get_to_from(conn, id_numerico):
              """
     df = pd.read_sql(get_to_from_historic_query, conn)
     return df
-def get_forecast_year(conn,id_numerico):
+def get_forecast_year(conn,id_numerico) -> object:
     get_to_from_forecast_query = f""" 
         select CONFARIMACABEZALPROYECCIONDESD as aniodesde, CONFARIMACABEZALPROYECCIONHAST as aniohasta
         from confarimacabezal
@@ -21,7 +21,7 @@ def get_forecast_year(conn,id_numerico):
 
     df = pd.read_sql(get_to_from_forecast_query, conn)
     return df
-def get_data_forecast(conn,anio_desde, anio_hasta,indice ):
+def get_data_forecast(conn,anio_desde, anio_hasta,indice ) -> str:
     get_data_query = f"""
             select anionro as anio, HISTORICOMES as mes, historicoporccomp  as valor
             from HISTORICO
@@ -29,7 +29,7 @@ def get_data_forecast(conn,anio_desde, anio_hasta,indice ):
             """
     df = pd.read_sql(get_data_query, conn)
     return df
-def update_model_spec_query(valor_ar, valor_i,valor_ma,id_numerico, indice):
+def update_model_spec_query(valor_ar, valor_i,valor_ma,id_numerico, indice) -> str:
     query = f'''
     update confarimaresultado set confarimaar={valor_ar},
     confarimai= {valor_i}, confarimama= {valor_ma}
@@ -39,10 +39,7 @@ def update_model_spec_query(valor_ar, valor_i,valor_ma,id_numerico, indice):
     return query
 
 
-def update_valor_forecast( valor, id_numerico, indice, anio, mes):
-    ## this function can update the bd of forecast
-    # so if i have
-    # {"month": [1, 2], "valor": forecast} update -> bd
+def update_valor_forecast( valor, id_numerico, indice, anio, mes) -> str:
 
     query = f''' 
         update confarimamodeloaplicado
@@ -53,19 +50,29 @@ def update_valor_forecast( valor, id_numerico, indice, anio, mes):
         and confarimamodeloaplicadoanio = {anio} and confarimamodeloaplicadomes = {mes}
 
     '''
-    ######################################################################################
-    ##### GABRIEL: falta agregar esto a el query de arriba
-    ##### and confarimamodeloaplicadoanio = 2031 and confarimamodeloaplicadomes = 3
-    ##### GABRIEL: aca puse 2031 y 3, pero deberian de ser el mes y año del resultado
+
     print(f"update_valor_forecast={query}")
     return query
 def get_conn(host, db, user, password,port):
-    print("conecting to db..")
-    conexion = psycopg2.connect(host=host, database=db, user=user, password=password,port=port)
 
+    print("conecting to db..")
+    try:
+
+        conexion = psycopg2.connect(host=host, database=db, user=user, password=password,port=port)
+    except Exception as e:
+
+        logging.ERROR(f"cant coneect exception {e}")
+
+        conexion = None
     return conexion
 def get_engine(conn):
-    engine = create_engine('postgresql+psycopg2://', creator=lambda: conn)
+
+    try:
+
+        engine = create_engine('postgresql+psycopg2://', creator=lambda: conn)
+    except Exception as e:
+        logging.ERROR(f"can´t create engine {e}")
+        engine = None
     return engine
 def get_data(conn, id_numerico,indice):
     logging.info(f'getting data for {id_numerico}')
@@ -90,7 +97,7 @@ def __do_update(conn,query,id_numerico,type):
     logging.info(f" update query {query}")
 
 def load_forecast_info(conn,id_numerico: int ,valor_ar: int, valor_i:int,valor_ma: int, indice:str):
-    #completar estos dos metodos
+
     update_espec_query = update_model_spec_query(valor_ar, valor_i,valor_ma,id_numerico, indice)
     __do_update(conn,update_espec_query,id_numerico,'specs')
     logging.info( f"finish load model info for {id_numerico}")
@@ -99,12 +106,11 @@ def load_forecast_info(conn,id_numerico: int ,valor_ar: int, valor_i:int,valor_m
 def load_forecast_values(conn, id_numerico:int, indice:str, valores: list, anio) :
     for i, l in enumerate(valores):
         m = int((l) % 18 +1 )
-        ##redondeamos millones
+
         valor = round(valores[i],3)
         print(valor, id_numerico,  indice, m )
         anio_actual = int(anio + i // 18)
         query_update_forcast = update_valor_forecast(valor, id_numerico, indice,anio_actual, mes = m)
         __do_update(conn,query_update_forcast, id_numerico ,'update_forecast')
 
-           # get_data(host, db, user, password, id_numerico)->{"data": df -> data to  learn,
-           #  "ind_proyeccion": pr_time -> time to forecast}
+

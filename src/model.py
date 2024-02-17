@@ -1,13 +1,5 @@
 import logging
-
-import pandas as pd
-import matplotlib.pyplot as plt
-import statsmodels.api as sm
-from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
-from statsmodels.stats.diagnostic import acorr_ljungbox
-from statsmodels.tsa.stattools import adfuller, kpss
 import numpy as np
-import scipy.stats as stats
 from pmdarima.arima import auto_arima
 from pmdarima.arima.utils import nsdiffs
 
@@ -31,8 +23,8 @@ class model:
     def  get_minimum_spec_auto(self):
         logging.info("geting total obs")
         obs = len(self.zt)
-        D = nsdiffs(self.zt, m=12, max_D=3) if obs > 60 else None
-        try_season = True if obs > 36 else False
+        D = nsdiffs(self.zt, m=12, max_D=2) if obs > 60 else None
+        try_season = True if obs > 30 else False
         return D, try_season
 
 
@@ -90,7 +82,7 @@ class model:
                     logging.ERROR(f"model with season has failed {e}")
                 aic_season = self.model_season.aic() if self.model_season else np.inf
             else:
-                print("model hasn't enought obs to try seasnal spec")
+                print("model hasn't enought obs to try seasonal spec")
                 logging.info(f"model hasn't enought obs {len(self.zt)} to try seasnal spec")
                 aic_season = np.infty
             aic_no_season = self.no_season.aic()
@@ -125,7 +117,7 @@ class model:
                 except:
                     print(f"parameter set wornglty setted {self.params}")
 
-    def forecast(self, periods: int):
+    def forecast(self, periods: int) -> list:
         try:
             self.predictions = self.model.predict(
                 n_periods=periods
@@ -134,4 +126,4 @@ class model:
             print("no model was set or n periods ahead are unapropriate ")
             logging.ERROR(f"exception raise {e}")
 
-        # to-do donde agrego
+
