@@ -1,0 +1,1734 @@
+2024-03-05 19:23:15,969 - INFO - getting data for 68
+2024-03-05 19:23:16,060 - INFO - anio_desde historico = 2022
+2024-03-05 19:23:16,060 - INFO - anio_hasta historico = 2023
+2024-03-05 19:23:16,077 - INFO - finishing geting data 2022 2023 and indice 5
+2024-03-05 19:23:16,088 - INFO -  years for fore cast    aniodesde  aniohasta
+0       2024       2028
+2024-03-05 19:23:16,102 - INFO - geting total obs
+2024-03-05 19:23:16,103 - INFO - estimating seasonal order using cannova-hansen test
+2024-03-05 19:23:16,103 - INFO - estimating arima no season 
+2024-03-05 19:23:18,443 - INFO - seasonal model was selected with aic846.9485072604386
+2024-03-05 19:23:18,466 - INFO - updating with 
+    update confarimaresultado set confarimaar=0,
+    confarimai= 0, confarimama= 1
+    where  confarimacabezalid= 68 and
+    confarimaindice= 5
+     for 68
+2024-03-05 19:23:18,491 - INFO - updated specs 68
+2024-03-05 19:23:18,491 - INFO -  update query 
+    update confarimaresultado set confarimaar=0,
+    confarimai= 0, confarimama= 1
+    where  confarimacabezalid= 68 and
+    confarimaindice= 5
+    
+2024-03-05 19:23:18,491 - INFO - finish load model info for 68
+2024-03-05 19:23:18,493 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-742.368
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 14
+
+     for 68
+2024-03-05 19:23:18,510 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,511 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=-742.368
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 14
+
+    
+2024-03-05 19:23:18,511 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,513 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,513 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,513 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,515 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,515 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,515 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,517 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,518 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,518 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,519 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,520 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,520 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,521 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,521 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,522 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,523 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,523 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,524 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,525 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,525 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,526 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,527 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,527 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,527 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,529 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,529 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,529 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,531 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,532 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,532 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,534 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,534 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,534 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,536 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,536 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,536 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,538 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,538 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,538 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,540 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,540 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,540 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,542 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,542 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,542 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,543 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,543 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,544 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,545 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,545 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,546 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,547 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,547 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,547 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,549 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,549 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,549 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,551 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,551 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,551 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,553 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,553 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,553 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,555 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,555 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,555 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,557 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,557 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,557 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,559 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,559 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,559 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,560 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,561 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,561 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,562 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,563 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,563 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,565 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,565 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,565 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,567 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,567 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,567 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,569 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,569 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,569 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,571 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,571 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,571 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,572 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,572 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,572 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,574 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,574 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,574 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,575 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,576 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,576 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,578 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,578 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,578 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,579 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,579 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,580 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,581 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,581 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,581 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,583 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,583 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,583 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,584 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,585 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,585 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,586 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,586 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,587 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,588 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,589 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,589 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,590 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,590 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,591 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,592 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,593 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,593 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,594 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,595 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,595 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,596 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,596 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,597 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,598 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,598 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,599 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,600 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,600 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,600 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,602 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,602 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,602 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,604 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,605 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,605 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,606 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,606 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,607 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,608 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,608 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,609 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,611 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,612 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,612 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,614 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,614 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,614 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,616 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,616 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2026 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,616 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,617 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,618 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,618 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,619 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,620 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,620 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,621 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,621 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,622 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,623 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,623 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,624 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,625 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,625 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,626 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,627 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,627 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,628 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,629 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,629 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,630 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,631 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,631 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,632 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,633 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,633 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,634 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,635 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,635 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,635 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,636 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,637 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,637 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,638 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,638 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,638 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,640 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,640 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,640 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,641 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,642 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,642 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,643 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,643 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,644 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,645 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,645 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,645 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,647 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,648 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,648 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,650 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,650 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2027 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,650 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,652 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,652 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,652 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,654 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,654 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,654 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,656 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,656 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,656 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,659 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,659 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,659 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,661 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,662 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,662 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,664 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,664 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,664 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,666 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,666 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,666 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,668 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,668 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,669 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,671 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,671 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,671 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,673 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,673 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,674 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,676 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,676 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,676 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,678 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,678 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,678 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,680 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,680 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,680 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,682 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,683 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,683 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,685 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,685 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,685 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,688 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,688 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,689 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,692 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,692 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+    
+2024-03-05 19:23:18,692 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+     for 68
+2024-03-05 19:23:18,694 - INFO - updated update_forecast 68
+2024-03-05 19:23:18,694 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7782.963
+        where confarimacabezalid=68 and
+        confarimamodeloaplicadoindice= 5
+        and confarimamodeloaplicadoanio = 2028 and confarimamodeloaplicadomes = 7
+
+    

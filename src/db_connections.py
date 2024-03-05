@@ -105,7 +105,7 @@ def load_forecast_info(conn,id_numerico: int ,valor_ar: int, valor_i:int,valor_m
 
 def load_forecast_values(conn, id_numerico:int, indice:str, valores: list, anio) :
     for i, l in enumerate(valores):
-        m = int((l) % 18 +1 )
+        m = int((i) % 18 +1 )
 
         valor = round(valores[i],3)
         print(valor, id_numerico,  indice, m )
