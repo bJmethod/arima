@@ -4,11 +4,13 @@ from sensitive import sensitive_dict
 from db_connections import get_data, get_conn,load_forecast_info,load_forecast_values, get_engine
 import logging
 
+## Refactor generar varios logs por  IDarima_indice.log ej : 7_2872.log
 user = sensitive_dict()['usr']
 password = sensitive_dict()['password']
 host = sensitive_dict()['host']
 port = sensitive_dict()['puerto']
 db = sensitive_dict()['db']
+LOG_RUTE = sensitive_dict()['log_dir']
 id_numerico= sys.argv[1]
 indice = sys.argv[2]
 
@@ -17,7 +19,7 @@ def interpret_steps(aniodesde, aniohasta):
     return {"steps": steps_ahead, "anio_desde": aniodesde}
 
 
-logging.basicConfig(filename=f'{id_numerico}_arima.log.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(filename=f'{LOG_RUTE}/{id_numerico}_{indice}.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 conn = get_conn(host, db, user, password,port)
 

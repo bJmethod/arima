@@ -29,7 +29,7 @@ class model:
 
 
     def get_arima(self) -> object:
-        ## todo hacer control de errores
+
         print(f" generating autoarima{self.auto}")
         if self.auto:
             self.params = {

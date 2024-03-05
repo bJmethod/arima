@@ -10,8 +10,13 @@ def sensitive_dict():
     database_base = config['DEFAULT']['DB']
     database_usuario = config['DEFAULT']['USER']
     database_password = config['DEFAULT']['PASSWORD']
-
-    configuraciones = {"usr": database_usuario, "password": database_password, "host" : database_host, "puerto" : database_puerto, "db" : database_base}
-    return configuraciones
+    loging_dir = config['DEFAULT']['DIR_LOG']
+           
+    return {"usr": database_usuario,
+                       "password": database_password,
+                       "host" : database_host,
+                       "puerto": database_puerto,
+                       "db": database_base,
+                       "log_dir": loging_dir}
 
 
