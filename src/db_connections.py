@@ -22,7 +22,7 @@ def get_forecast_year(conn,id_numerico) -> object:
 
     df = pd.read_sql(get_to_from_forecast_query, conn)
     return df
-def get_data_forecast(conn,anio_desde, anio_hasta,indice ) -> str:
+def get_data_forecast(conn,anio_desde, anio_hasta,indice ) :
     get_data_query = f"""
             select anionro as anio, HISTORICOMES as mes, historicoporccomp  as valor
             from HISTORICO
@@ -30,6 +30,8 @@ def get_data_forecast(conn,anio_desde, anio_hasta,indice ) -> str:
             """
     df = pd.read_sql(get_data_query, conn)
     return df
+
+
 def update_model_spec_query(valor_ar, valor_i,valor_ma,id_numerico, indice) -> str:
     query = f'''
     update confarimaresultado set confarimaar={valor_ar},
@@ -54,6 +56,8 @@ def update_valor_forecast( valor, id_numerico, indice, anio, mes) -> str:
 
     print(f"update_valor_forecast={query}")
     return query
+
+
 def get_conn(host, db, user, password,port):
 
     print("conecting to db..")
@@ -66,6 +70,8 @@ def get_conn(host, db, user, password,port):
 
         conexion = None
     return conexion
+
+
 def get_engine(conn):
 
     try:
@@ -75,6 +81,8 @@ def get_engine(conn):
         logging.ERROR(f"can´t create engine {e}")
         engine = None
     return engine
+
+
 def get_data(conn, id_numerico,indice):
     logging.info(f'getting data for {id_numerico}')
     forecast_year = get_to_from(conn, id_numerico) # GABRIEL de aca se saca desde y hasta a tomar del historico
@@ -89,6 +97,8 @@ def get_data(conn, id_numerico,indice):
     logging.info(f' years for fore cast {pr_time}')
     return {"data": df,
             "ind_proyeccion": pr_time}
+
+
 def __do_update(conn,query,id_numerico,type):
     cur = conn.cursor()
     logging.info(f'updating with {query} for {id_numerico}')
@@ -110,7 +120,7 @@ def load_forecast_values(conn, id_numerico:int, indice:str, valores: list, anio,
     for i, l in enumerate(valores):
         m = interpret_months(i)
         valor = round(valores[i],3)
-        print(valor, id_numerico,  indice, m )
+        print(f" inserting value {valor}, in {id_numerico},  for {indice}, month {m} " )
         anio_actual = interpret_year(anio,i)
         query_update_forcast = update_valor_forecast(valor, id_numerico, indice,anio_actual, mes = m)
         __do_update(conn,query_update_forcast, id_numerico ,'update_forecast')
