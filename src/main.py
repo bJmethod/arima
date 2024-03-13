@@ -2,6 +2,7 @@ import sys
 from model import model
 from sensitive import sensitive_dict
 from db_connections import get_data, get_conn,load_forecast_info,load_forecast_values, get_engine
+from utils import interpret_steps
 import logging
 
 ## Refactor generar varios logs por  IDarima_indice.log ej : 7_2872.log
@@ -13,10 +14,6 @@ db = sensitive_dict()['db']
 LOG_RUTE = sensitive_dict()['log_dir']
 id_numerico= sys.argv[1]
 indice = sys.argv[2]
-
-def interpret_steps(aniodesde, aniohasta):
-    steps_ahead = int((aniohasta - aniodesde + 1)*18)
-    return {"steps": steps_ahead, "anio_desde": aniodesde}
 
 
 logging.basicConfig(filename=f'{LOG_RUTE}/{id_numerico}_{indice}.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -48,7 +45,7 @@ steps_interpreted = interpret_steps(anio_desde, anio_hasta)
 steps = steps_interpreted["steps"]
 print(f"LOG= forcasting for {steps} preiods ahead from {anio_desde} to {anio_hasta} ")
 model.forecast(int(steps))
-valores = model.predictions
+valores = model.predictions.values
 
 valor_ar, valor_i, valor_ma = model.model.order
 ## update values
@@ -57,4 +54,4 @@ id = int(id_numerico)
 load_forecast_info(conn,id,valor_ar, valor_i,valor_ma, indice)
 print(f"update for id {id} valores {valores}")
 
-load_forecast_values(conn, id, indice, valores.values,anio_desde)
+load_forecast_values(conn, id, indice, valores,anio_desde)

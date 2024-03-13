@@ -2,6 +2,7 @@ import pandas as pd
 from sqlalchemy import create_engine
 import psycopg2
 import logging
+from src.utils import *
 
 def get_to_from(conn, id_numerico) -> object:
 
@@ -96,21 +97,23 @@ def __do_update(conn,query,id_numerico,type):
     logging.info(f"updated {type} {id_numerico}")
     logging.info(f" update query {query}")
 
-def load_forecast_info(conn,id_numerico: int ,valor_ar: int, valor_i:int,valor_ma: int, indice:str):
 
+def load_forecast_info(conn,id_numerico: int ,valor_ar: int, valor_i:int,valor_ma: int, indice:str):
     update_espec_query = update_model_spec_query(valor_ar, valor_i,valor_ma,id_numerico, indice)
     __do_update(conn,update_espec_query,id_numerico,'specs')
     logging.info( f"finish load model info for {id_numerico}")
 
 
-def load_forecast_values(conn, id_numerico:int, indice:str, valores: list, anio) :
-    for i, l in enumerate(valores):
-        m = int((i) % 18 +1 )
 
+
+def load_forecast_values(conn, id_numerico:int, indice:str, valores: list, anio,) :
+    for i, l in enumerate(valores):
+        m = interpret_months(i)
         valor = round(valores[i],3)
         print(valor, id_numerico,  indice, m )
-        anio_actual = int(anio + i // 18)
+        anio_actual = interpret_year(anio,i)
         query_update_forcast = update_valor_forecast(valor, id_numerico, indice,anio_actual, mes = m)
         __do_update(conn,query_update_forcast, id_numerico ,'update_forecast')
+
 
 
