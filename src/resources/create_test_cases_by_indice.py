@@ -10,5 +10,11 @@ def read_main_file_and_split_by_indice(file):
      nombre_dataframe = f"{file}_{indice}.csv"
      df_temporal.to_csv(nombre_dataframe, index= False)
 
+def read_error_case(file):
+    df = pd.read_excel(f"{file}.xlsx")
+    nombre_dataframe = f"{file}.csv"
+    df.to_csv(nombre_dataframe, index=False)
+
 if __name__== '__main__':
-    read_main_file_and_split_by_indice("historico")
+    #read_main_file_and_split_by_indice("historico")
+    read_error_case("historico_856")

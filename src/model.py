@@ -20,10 +20,11 @@ class model:
         self.spec = spec
         self.season = season
 
-    def  get_minimum_spec_auto(self):
+    def get_minimum_spec_auto(self):
         logging.info("geting total obs")
-        obs = len(self.zt)
-        D = nsdiffs(self.zt, m=12, max_D=2) if obs > 60 else None
+        cases = len(self.zt.unique())
+        obs =  len(self.zt)
+        D = nsdiffs(self.zt, m=12, max_D=2) if cases > 30 else 0
         try_season = True if obs > 30 else False
         return D, try_season
 
@@ -82,7 +83,7 @@ class model:
                     logging.ERROR(f"model with season has failed {e}")
                 aic_season = self.model_season.aic() if self.model_season else np.inf
             else:
-                print("model hasn't enought obs to try seasonal spec")
+                print("model hasn't enought obs or variance to try seasonal spec")
                 logging.info(f"model hasn't enought obs {len(self.zt)} to try seasnal spec")
                 aic_season = np.infty
             aic_no_season = self.no_season.aic()
@@ -115,7 +116,7 @@ class model:
                                                 m=12
                                                 )
                 except:
-                    print(f"parameter set wornglty setted {self.params}")
+                    print(f"parameter are wrongly setted {self.params}")
 
     def forecast(self, periods: int) -> list:
         try:
