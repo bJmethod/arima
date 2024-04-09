@@ -79,3 +79,8 @@ class Testupdates(unittest.TestCase):
         test_list = [round(num, 6) for num in list(valores)]
         self.assertListEqual(test_list,expected_values )
 
+    def test_exec_error(self):
+        file= './resources/historico_1480.csv'
+        valores= createStudycase(file, 1)
+        t =len(valores)
+        self.assertEquals(t, 18)

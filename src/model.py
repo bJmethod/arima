@@ -15,7 +15,7 @@ class model:
         self.params = None
         self.max_d = None
         self.max_order = None
-        self.zt = data
+        self.zt = data.fillna(method='backfill')
         self.auto = auto
         self.spec = spec
         self.season = season
@@ -118,7 +118,7 @@ class model:
                 except:
                     print(f"parameter are wrongly setted {self.params}")
 
-    def forecast(self, periods: int) -> list:
+    def forecast(self, periods: int):
         try:
             self.predictions = self.model.predict(
                 n_periods=periods

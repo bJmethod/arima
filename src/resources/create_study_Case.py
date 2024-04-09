@@ -7,7 +7,11 @@ from src.db_connections import *
 def createStudycase(file: str, inidce: int) -> list:
     anio_desde =2024
     anio_hasta= 2024
-    study_case = pd.read_csv(file)
+    #si es csv
+    if file.endswith('.csv'):
+        study_case = pd.read_csv(file)
+    else:
+        study_case = pd.read_excel(file)
     study_case.rename(columns ={'historicoporccomp':"valor"},inplace=True)
     steps_interpreted = interpret_steps(anio_desde, anio_hasta)
     steps = steps_interpreted["steps"]

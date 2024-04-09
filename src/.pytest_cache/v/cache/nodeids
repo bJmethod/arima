@@ -1,3 +1,8 @@
 [
-  "test_modelos.py::TestModelos::test_forecast_error"
+  "test_modelos.py::TestModelos::test_forecast_error",
+  "tests/test_inserts.py::Testupdates::testError",
+  "tests/test_inserts.py::Testupdates::testFakeInserts",
+  "tests/test_inserts.py::Testupdates::testInsertionMessages",
+  "tests/test_inserts.py::Testupdates::testUpdateMessages",
+  "tests/test_inserts.py::Testupdates::test_exec_error"
 ]
