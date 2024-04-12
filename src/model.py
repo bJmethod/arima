@@ -52,7 +52,7 @@ class model:
                 model_no_season = auto_arima(self.zt, start_p=self.start, start_q=self.start,
                                              max_p=self.max_order, max_q=self.max_order,
                                              seasonal=self.seasonal,
-                                             trace=True,
+                                             trace=False,
                                              error_action='ignore',
                                              suppress_warnings=True,
                                              stepwise=True)
@@ -74,7 +74,7 @@ class model:
                                               max_q=self.max_order,
                                               max_d=self.max_d,
                                               m=12,
-                                              trace=True,
+                                              trace=False,
                                               error_action='ignore',
                                               suppress_warnings=True,
                                               stepwise=True)

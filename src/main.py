@@ -25,7 +25,7 @@ engine =get_engine(conn)
 d = get_data(engine, id_numerico,indice)
 
 df = d['data']
-print(f"HISTORICO = {df}")
+#print(f"HISTORICO = {df}")
 time_to_forecast = d["ind_proyeccion"]
 Xt = df["valor"]
 print(f"CABEZAL ARIMA = {id_numerico}")
@@ -45,7 +45,8 @@ steps_interpreted = interpret_steps(anio_desde, anio_hasta)
 steps = steps_interpreted["steps"]
 print(f"LOG= forcasting for {steps} preiods ahead from {anio_desde} to {anio_hasta} ")
 model.forecast(int(steps))
-valores = model.predictions.values
+
+valores = model.predictions.values if model.predictions is not None else print("no predictions for id {id_numerico} indice {indice}")
 
 valor_ar, valor_i, valor_ma = model.model.order
 ## update values
@@ -53,5 +54,5 @@ valor_ar, valor_i, valor_ma = model.model.order
 id = int(id_numerico)
 load_forecast_info(conn,id,valor_ar, valor_i,valor_ma, indice)
 print(f"update for id {id} valores {valores}")
-
-load_forecast_values(conn, id, indice, valores,anio_desde)
+if valores is not None:
+ load_forecast_values(conn, id, indice, valores,anio_desde)
