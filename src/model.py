@@ -23,14 +23,33 @@ class model:
     def get_minimum_spec_auto(self):
         logging.info("geting total obs")
         cases = len(self.zt.unique())
-        obs =  len(self.zt)
+        obs = len(self.zt)
         D = nsdiffs(self.zt, m=12, max_D=2) if cases > 30 else 0
         try_season = True if obs > 30 else False
         return D, try_season
 
+    def get_diff_serires(self):
+        diff = np.zeros(len(self.zt))
+        # take series and return the diff vs previous perio# d
+        señal = self.zt
+        try:
+
+            for i in range( len(señal)):
+                #modulus function  from i to 18
+
+                if (((i%18) -1) < 0):
+                    diff[i] = diff[i]
+                else:
+                    diff[i] = señal[i] - señal[i - 1]
+            return  diff
+        except Exception as e:
+            print(f"error {e}")
+            logging.ERROR(f"error {e}")
+
+
 
     def get_arima(self) -> object:
-
+        self.xt = self.get_diff_serires()
         print(f" generating autoarima{self.auto}")
         if self.auto:
             self.params = {
@@ -43,13 +62,12 @@ class model:
             self.max_d = 2
             self.seasonal = False
             self.start = 1
-            self.D =D
+            self.D = D
             logging.info(f"estimating seasonal order using cannova-hansen test")
-
 
             try:
                 logging.info("estimating arima no season ")
-                model_no_season = auto_arima(self.zt, start_p=self.start, start_q=self.start,
+                model_no_season = auto_arima(self.xt, start_p=self.start, start_q=self.start,
                                              max_p=self.max_order, max_q=self.max_order,
                                              seasonal=self.seasonal,
                                              trace=False,
@@ -65,7 +83,7 @@ class model:
             ## revisar aqui por qué rompe,
             if try_season:
                 try:
-                    model_season = auto_arima(self.zt,
+                    model_season = auto_arima(self.xt,
                                               start_p=self.start,
                                               start_q=self.start,
                                               start_P=self.start,
@@ -84,7 +102,7 @@ class model:
                 aic_season = self.model_season.aic() if self.model_season else np.inf
             else:
                 print("model hasn't enought obs or variance to try seasonal spec")
-                logging.info(f"model hasn't enought obs {len(self.zt)} to try seasnal spec")
+                logging.info(f"model hasn't enought obs {len(self.xt)} to try seasnal spec")
                 aic_season = np.infty
             aic_no_season = self.no_season.aic()
             if aic_season > aic_no_season:
@@ -97,7 +115,7 @@ class model:
             if len(self.spec) > 0:
                 try:
                     if self.season:
-                        self.model = auto_arima(self.zt,
+                        self.model = auto_arima(self.xt,
                                                 p=self.spec[0],
                                                 d=self.spec[1],
                                                 q=self.spec[2],
@@ -108,7 +126,7 @@ class model:
 
 
                     else:
-                        self.model = auto_arima(self.zt,
+                        self.model = auto_arima(self.xt,
                                                 p=self.spec[0],
                                                 d=self.spec[1],
                                                 q=self.spec[2],
@@ -126,5 +144,3 @@ class model:
         except Exception as e:
             print("no model was set or n periods ahead are unapropriate ")
             logging.ERROR(f"exception raise {e}")
-
-

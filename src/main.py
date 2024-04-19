@@ -1,8 +1,11 @@
 import sys
+
+import pandas as pd
+
 from model import model
 from sensitive import sensitive_dict
 from db_connections import get_data, get_conn,load_forecast_info,load_forecast_values, get_engine
-from utils import interpret_steps
+from utils import interpret_steps, integrate_series
 import logging
 
 ## Refactor generar varios logs por  IDarima_indice.log ej : 7_2872.log
@@ -39,15 +42,17 @@ model = model(Xt, True, [], True)
 model.get_arima()
 
 ## esto está arrojando un vector de forecast tamaño 2 y deberia ser tamaño 18
-anio_hasta = time_to_forecast.aniohasta.values[0]
-anio_desde = time_to_forecast.aniodesde.values[0]
+anio_hasta = 2025 #time_to_forecast.aniohasta.values[0]
+anio_desde = 2024 #time_to_forecast.aniodesde.values[0]
 steps_interpreted = interpret_steps(anio_desde, anio_hasta)
 steps = steps_interpreted["steps"]
 print(f"LOG= forcasting for {steps} preiods ahead from {anio_desde} to {anio_hasta} ")
 model.forecast(int(steps))
 
-valores = model.predictions.values if model.predictions is not None else print("no predictions for id {id_numerico} indice {indice}")
-
+valoresD = model.predictions if model.predictions is not None else print("no predictions for id {id_numerico} indice {indice}")
+valores = integrate_series(valoresD)
+print("queremos insertr: ",valores)
+pd.DataFrame({"porc":valores}).to_csv(f'{LOG_RUTE}/{id_numerico}_{indice}_forecast.csv',index=False)
 valor_ar, valor_i, valor_ma = model.model.order
 ## update values
 
@@ -56,3 +61,4 @@ load_forecast_info(conn,id,valor_ar, valor_i,valor_ma, indice)
 print(f"update for id {id} valores {valores}")
 if valores is not None:
  load_forecast_values(conn, id, indice, valores,anio_desde)
+

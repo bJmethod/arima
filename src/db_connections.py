@@ -29,6 +29,7 @@ def get_data_forecast(conn,anio_desde, anio_hasta,indice ) :
             where anionro >= {anio_desde} and anionro<= {anio_hasta} and HISTORICOINDICE = {indice} order by anio,mes
             """
     df = pd.read_sql(get_data_query, conn)
+
     return df
 
 
@@ -64,6 +65,7 @@ def get_conn(host, db, user, password,port):
     try:
 
         conexion = psycopg2.connect(host=host, database=db, user=user, password=password,port=port)
+
     except Exception as e:
 
         logging.ERROR(f"cant coneect exception {e}")
