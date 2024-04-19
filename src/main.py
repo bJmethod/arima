@@ -42,8 +42,8 @@ model = model(Xt, True, [], True)
 model.get_arima()
 
 ## esto está arrojando un vector de forecast tamaño 2 y deberia ser tamaño 18
-anio_hasta = 2025 #time_to_forecast.aniohasta.values[0]
-anio_desde = 2024 #time_to_forecast.aniodesde.values[0]
+anio_hasta = time_to_forecast.aniohasta.values[0]
+anio_desde = time_to_forecast.aniodesde.values[0]
 steps_interpreted = interpret_steps(anio_desde, anio_hasta)
 steps = steps_interpreted["steps"]
 print(f"LOG= forcasting for {steps} preiods ahead from {anio_desde} to {anio_hasta} ")
