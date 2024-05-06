@@ -2432,3 +2432,11 @@
         and confarimamodeloaplicadoanio = 2025 and confarimamodeloaplicadomes = 18
 
     
+2024-05-06 15:50:07,023 - INFO - geting total obs
+2024-05-06 15:50:07,157 - INFO - estimating seasonal order using cannova-hansen test
+2024-05-06 15:50:07,158 - INFO - estimating arima no season 
+2024-05-06 15:50:19,600 - INFO - seasonal model was selected with aic893.855865848678
+2024-05-06 16:11:13,717 - INFO - geting total obs
+2024-05-06 16:11:13,764 - INFO - estimating seasonal order using cannova-hansen test
+2024-05-06 16:11:13,764 - INFO - estimating arima no season 
+2024-05-06 16:11:25,811 - INFO - seasonal model was selected with aic893.855865848678

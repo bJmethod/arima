@@ -2,10 +2,11 @@ import pandas as pd
 from sqlalchemy import create_engine
 import psycopg2
 import logging
+from datetime import datetime
 from src.utils import *
 
-def get_to_from(conn, id_numerico) -> object:
 
+def get_to_from(conn, id_numerico) -> object:
     get_to_from_historic_query = f""" 
          select confarimacabezalhistoricodesde as aniodesde, confarimacabezalhistoricohasta as aniohasta
          from confarimacabezal
@@ -13,7 +14,9 @@ def get_to_from(conn, id_numerico) -> object:
              """
     df = pd.read_sql(get_to_from_historic_query, conn)
     return df
-def get_forecast_year(conn,id_numerico) -> object:
+
+
+def get_forecast_year(conn, id_numerico) -> object:
     get_to_from_forecast_query = f""" 
         select CONFARIMACABEZALPROYECCIONDESD as aniodesde, CONFARIMACABEZALPROYECCIONHAST as aniohasta
         from confarimacabezal
@@ -22,7 +25,9 @@ def get_forecast_year(conn,id_numerico) -> object:
 
     df = pd.read_sql(get_to_from_forecast_query, conn)
     return df
-def get_data_forecast(conn,anio_desde, anio_hasta,indice ) :
+
+
+def get_data_forecast(conn, anio_desde, anio_hasta, indice):
     get_data_query = f"""
             select anionro as anio, HISTORICOMES as mes, historicoporccomp  as valor
             from HISTORICO
@@ -33,7 +38,7 @@ def get_data_forecast(conn,anio_desde, anio_hasta,indice ) :
     return df
 
 
-def update_model_spec_query(valor_ar, valor_i,valor_ma,id_numerico, indice) -> str:
+def update_model_spec_query(valor_ar, valor_i, valor_ma, id_numerico, indice) -> str:
     query = f'''
     update confarimaresultado set confarimaar={valor_ar},
     confarimai= {valor_i}, confarimama= {valor_ma}
@@ -43,8 +48,7 @@ def update_model_spec_query(valor_ar, valor_i,valor_ma,id_numerico, indice) -> s
     return query
 
 
-def update_valor_forecast( valor, id_numerico, indice, anio, mes) -> str:
-
+def update_valor_forecast(valor, id_numerico, indice, anio, mes) -> str:
     query = f''' 
         update confarimamodeloaplicado
         set procesado=TRUE,
@@ -55,19 +59,21 @@ def update_valor_forecast( valor, id_numerico, indice, anio, mes) -> str:
 
     '''
 
-    print(f"update_valor_forecast={query}")
+    # print(f"update_valor_forecast={query}")
     return query
 
 
-def get_conn(host, db, user, password,port):
+def get_conn(host, db, user, password, port):
+    print("Conectando a BD..")
 
-    print("conecting to db..")
     try:
 
-        conexion = psycopg2.connect(host=host, database=db, user=user, password=password,port=port)
+        conexion = psycopg2.connect(host=host, database=db, user=user, password=password, port=port)
+        insert_log(conexion, 0, 0, 'db_connections.py',
+                   'Conectamos a BD, ' + str(host) + '  ' + str(db) + '  ' + str(user) + '  ' + str(port))
 
     except Exception as e:
-
+        print("cant coneect exception {e}")
         logging.ERROR(f"cant coneect exception {e}")
 
         conexion = None
@@ -75,57 +81,89 @@ def get_conn(host, db, user, password,port):
 
 
 def get_engine(conn):
-
     try:
-
         engine = create_engine('postgresql+psycopg2://', creator=lambda: conn)
     except Exception as e:
-        logging.ERROR(f"can´t create engine {e}")
+        # logging.ERROR(f"can´t create engine {e}")
+        insert_log(conn, 0, 0, 'db_connections.py', 'No se puede crear engine ' + str(e))
         engine = None
     return engine
 
 
-def get_data(conn, id_numerico,indice):
-    logging.info(f'getting data for {id_numerico}')
-    forecast_year = get_to_from(conn, id_numerico) # GABRIEL de aca se saca desde y hasta a tomar del historico
+def get_data(conexionbd, conn, id_numerico, indice):
+    print(f'getting data for {id_numerico}')
+    insert_log(conexionbd, id_numerico, indice, 'db_connections.py', 'Obtener datos para id=' + str(id_numerico))
+
+    forecast_year = get_to_from(conn, id_numerico)  # GABRIEL de aca se saca desde y hasta a tomar del historico
     # forecast_year -> {"aniodesde":[1],"aniohasta":[2]}
-    anio_desde= forecast_year.aniodesde[0]
+    anio_desde = forecast_year.aniodesde[0]
     anio_hasta = forecast_year.aniohasta[0]
-    logging.info(f"anio_desde historico = {anio_desde}")
-    logging.info(f"anio_hasta historico = {anio_hasta}")
-    df = get_data_forecast(conn, anio_desde, anio_hasta, indice) ## GABRIEL se pasa indice para obtener los datos del historico
-    logging.info(f'finishing geting data {anio_desde} {anio_hasta} and indice {indice}')
-    pr_time = get_forecast_year(conn,id_numerico) #GABROEÑ esta bien pasar el id, que es la clave en el cabezal arima
-    logging.info(f' years for fore cast {pr_time}')
-    return {"data": df,
+    # insert_log(conn, id_numerico, indice,'db_connections.py', 'historico anio_desde = '+str(anio_desde)+' anio_hasta = '+str(anio_hasta))
+
+    df = get_data_forecast(conn, anio_desde, anio_hasta,
+                           indice)  ## GABRIEL se pasa indice para obtener los datos del historico
+
+    insert_log(conexionbd, id_numerico, indice, 'db_connections.py',
+               'Fin get dato anio_desde = ' + str(anio_desde) + ' anio_hasta = ' + str(anio_hasta) + ' indice ' + str(
+                   indice))
+
+    # df tiene N anos y N meses, pero puede que no este completo (N anos*18)
+    # Create a DataFrame with all possible combinations of years and months
+    df2 = pd.DataFrame([(year, month, 0) for year in range(anio_desde, anio_hasta + 1) for month in range(1, 19)],
+                       columns=['anio', 'mes', 'valor'])
+
+    # Update 'valor' column in df2 based on the values in df
+    df2.set_index(['anio', 'mes'], inplace=True)
+    df.set_index(['anio', 'mes'], inplace=True)
+    df2.update(df)
+    df2.reset_index(inplace=True)
+
+    pr_time = get_forecast_year(conn, id_numerico)
+    to_log = [pr_time, df2]
+    str_case = ["Anios para forecast= ","Agregado de 0= "]
+
+    for i in range(2):
+        json_str = to_log[i].to_json(orient='records', lines=True)
+        insert_log(conexionbd, id_numerico, indice, 'db_connections.py', f'{str_case[i]}' + str(json_str))
+
+    return {"data": df2,
             "ind_proyeccion": pr_time}
 
 
-def __do_update(conn,query,id_numerico,type):
+def __do_update(conn, query, id_numerico, indice, type):
     cur = conn.cursor()
-    logging.info(f'updating with {query} for {id_numerico}')
+    insert_log(conn, id_numerico, indice, 'db_connections.py', 'Update (' + str(type) + ')= ' + str(query))
     cur.execute(query)
     conn.commit()
-    logging.info(f"updated {type} {id_numerico}")
-    logging.info(f" update query {query}")
+
+def load_forecast_info(conn, id_numerico: int, valor_ar: int, valor_i: int, valor_ma: int, indice: str):
+    update_espec_query = update_model_spec_query(valor_ar, valor_i, valor_ma, id_numerico, indice)
+    __do_update(conn, update_espec_query, id_numerico, indice, 'specs')
+    insert_log(conn, id_numerico, indice, 'db_connections.py',
+               'Fin load del modelo ' + str(id_numerico) + ' - ' + str(indice))
 
 
-def load_forecast_info(conn,id_numerico: int ,valor_ar: int, valor_i:int,valor_ma: int, indice:str):
-    update_espec_query = update_model_spec_query(valor_ar, valor_i,valor_ma,id_numerico, indice)
-    __do_update(conn,update_espec_query,id_numerico,'specs')
-    logging.info( f"finish load model info for {id_numerico}")
-
-
-
-
-def load_forecast_values(conn, id_numerico:int, indice:str, valores: list, anio,) :
+def load_forecast_values(conn, id_numerico: int, indice: str, valores: list, anio, ):
     for i, l in enumerate(valores):
         m = interpret_months(i)
-        valor = round(valores[i],3)
-        print(f" inserting value {valor}, in {id_numerico},  for {indice}, month {m} " )
-        anio_actual = interpret_year(anio,i)
-        query_update_forcast = update_valor_forecast(valor, id_numerico, indice,anio_actual, mes = m)
-        __do_update(conn,query_update_forcast, id_numerico ,'update_forecast')
+        valor = round(valores[i], 3)
+        anio_actual = interpret_year(anio, i)
+        insert_log(conn, id_numerico, indice, 'db_connections.py',
+                   'Actualizando porc: ' + str(id_numerico) + ' - ' + str(indice) + ' - ' + str(
+                       anio_actual) + ' - ' + str(m) + ' = ' + str(valor))
+        query_update_forcast = update_valor_forecast(valor, id_numerico, indice, anio_actual, mes=m)
+        __do_update(conn, query_update_forcast, id_numerico, indice, 'update_forecast')
 
 
-
+def insert_log(conn, id_numerico: int, indice: str, programa: str, textolog: str):
+    ahora = datetime.now()
+    fecha_hora_formato = ahora.strftime("%Y-%m-%d %H:%M:%S")
+    texto = str(id_numerico) + '-' + str(indice) + '--python'
+    query = f'''
+    INSERT INTO log (logfecha, logversion, logusuario, logprograma, logdescripcion) VALUES 
+    ('{fecha_hora_formato}', '1', '{texto}', '{programa}', '{textolog}');
+    '''
+    cur = conn.cursor()
+    cur.execute(query)
+    conn.commit()
+    # logging.info( f"{texto}")

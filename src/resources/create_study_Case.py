@@ -20,5 +20,5 @@ def createStudycase(file: str, inidce: int) -> list:
     arima.get_arima()
     arima.forecast(int(steps))
     valores = arima.predictions
-    return valores.values
+    return valores
 
