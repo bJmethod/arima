@@ -1,3 +1,4 @@
 {
-  "tests/test_inserts.py": true
+  "tests/test_inserts.py": true,
+  "tests/.pytest_cache/test_completness_historical.py::testCompleteness::testHistoricalData": true
 }
