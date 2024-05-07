@@ -1,6 +1,7 @@
 [
   "test_modelos.py::TestModelos::test_forecast_error",
   "tests/.pytest_cache/test_completness_historical.py::testCompleteness::testHistoricalData",
+  "tests/test_completness_historical.py::testCompleteness::testHistoricalData",
   "tests/test_inserts.py::Testupdates::testError",
   "tests/test_inserts.py::Testupdates::testFakeInserts",
   "tests/test_inserts.py::Testupdates::testInsertionMessages",

@@ -109,14 +109,7 @@ def get_data(conexionbd, conn, id_numerico, indice):
 
     # df tiene N anos y N meses, pero puede que no este completo (N anos*18)
     # Create a DataFrame with all possible combinations of years and months
-    df2 = pd.DataFrame([(year, month, 0) for year in range(anio_desde, anio_hasta + 1) for month in range(1, 19)],
-                       columns=['anio', 'mes', 'valor'])
-
-    # Update 'valor' column in df2 based on the values in df
-    df2.set_index(['anio', 'mes'], inplace=True)
-    df.set_index(['anio', 'mes'], inplace=True)
-    df2.update(df)
-    df2.reset_index(inplace=True)
+    df2 = complete_series(anio_desde, anio_hasta, df)
 
     pr_time = get_forecast_year(conn, id_numerico)
     to_log = [pr_time, df2]
@@ -128,6 +121,17 @@ def get_data(conexionbd, conn, id_numerico, indice):
 
     return {"data": df2,
             "ind_proyeccion": pr_time}
+
+
+def complete_series(anio_desde, anio_hasta, df):
+    df2 = pd.DataFrame([(year, month, 0) for year in range(anio_desde, anio_hasta + 1) for month in range(1, 19)],
+                       columns=['anio', 'mes', 'valor'])
+    # Update 'valor' column in df2 based on the values in df
+    df2.set_index(['anio', 'mes'], inplace=True)
+    df.set_index(['anio', 'mes'], inplace=True)
+    df2.update(df)
+    df2.reset_index(inplace=True)
+    return df2
 
 
 def __do_update(conn, query, id_numerico, indice, type):
