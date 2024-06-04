@@ -71,7 +71,7 @@ def get_conn(host, db, user, password, port):
         conexion = psycopg2.connect(host=host, database=db, user=user, password=password, port=port)
         insert_log(conexion, 0, 0, 'db_connections.py',
                    'Conectamos a BD, ' + str(host) + '  ' + str(db) + '  ' + str(user) + '  ' + str(port))
-
+        logging.info(f"Conectamos a BD, {host} {db} {user} {port}")
     except Exception as e:
         print("cant coneect exception {e}")
         logging.ERROR(f"cant coneect exception {e}")
@@ -86,6 +86,7 @@ def get_engine(conn):
     except Exception as e:
         # logging.ERROR(f"can´t create engine {e}")
         insert_log(conn, 0, 0, 'db_connections.py', 'No se puede crear engine ' + str(e))
+        logging.ERROR('No se puede crear engine ' + str(e))
         engine = None
     return engine
 
@@ -98,7 +99,9 @@ def get_data(conexionbd, conn, id_numerico, indice):
     # forecast_year -> {"aniodesde":[1],"aniohasta":[2]}
     anio_desde = forecast_year.aniodesde[0]
     anio_hasta = forecast_year.aniohasta[0]
-    # insert_log(conn, id_numerico, indice,'db_connections.py', 'historico anio_desde = '+str(anio_desde)+' anio_hasta = '+str(anio_hasta))
+    logging.info(f"anio_desde historico = {anio_desde}")
+    logging.info(f"anio_hasta historico = {anio_hasta}")
+    insert_log(conexionbd, id_numerico, indice,'db_connections.py', 'historico anio_desde = '+str(anio_desde)+' anio_hasta = '+str(anio_hasta))
 
     df = get_data_forecast(conn, anio_desde, anio_hasta,
                            indice)  ## GABRIEL se pasa indice para obtener los datos del historico
@@ -106,7 +109,7 @@ def get_data(conexionbd, conn, id_numerico, indice):
     insert_log(conexionbd, id_numerico, indice, 'db_connections.py',
                'Fin get dato anio_desde = ' + str(anio_desde) + ' anio_hasta = ' + str(anio_hasta) + ' indice ' + str(
                    indice))
-
+    logging.info(f'finishing geting data {anio_desde} {anio_hasta} and indice {indice}')
     # df tiene N anos y N meses, pero puede que no este completo (N anos*18)
     # Create a DataFrame with all possible combinations of years and months
     df2 = complete_series(anio_desde, anio_hasta, df)
@@ -118,7 +121,7 @@ def get_data(conexionbd, conn, id_numerico, indice):
     for i in range(2):
         json_str = to_log[i].to_json(orient='records', lines=True)
         insert_log(conexionbd, id_numerico, indice, 'db_connections.py', f'{str_case[i]}' + str(json_str))
-
+        logging.info(f'{str_case[i]}' + str(json_str))
     return {"data": df2,
             "ind_proyeccion": pr_time}
 
@@ -136,15 +139,19 @@ def complete_series(anio_desde, anio_hasta, df):
 
 def __do_update(conn, query, id_numerico, indice, type):
     cur = conn.cursor()
+    logging.info(f'updating with {query} for {id_numerico}')
     insert_log(conn, id_numerico, indice, 'db_connections.py', 'Update (' + str(type) + ')= ' + str(query))
     cur.execute(query)
     conn.commit()
+    logging.info(f"updated {type} {id_numerico}")
+    logging.info(f" update query {query}")
 
 def load_forecast_info(conn, id_numerico: int, valor_ar: int, valor_i: int, valor_ma: int, indice: str):
     update_espec_query = update_model_spec_query(valor_ar, valor_i, valor_ma, id_numerico, indice)
     __do_update(conn, update_espec_query, id_numerico, indice, 'specs')
     insert_log(conn, id_numerico, indice, 'db_connections.py',
                'Fin load del modelo ' + str(id_numerico) + ' - ' + str(indice))
+    logging.info(f"finish load model info for {id_numerico} - {indice}")
 
 
 def load_forecast_values(conn, id_numerico: int, indice: str, valores: list, anio, ):
@@ -159,7 +166,7 @@ def load_forecast_values(conn, id_numerico: int, indice: str, valores: list, ani
         __do_update(conn, query_update_forcast, id_numerico, indice, 'update_forecast')
 
 
-def insert_log(conn, id_numerico: int, indice: str, programa: str, textolog: str):
+def insert_log(conn, id_numerico: str, indice: str, programa: str, textolog: str):
     ahora = datetime.now()
     fecha_hora_formato = ahora.strftime("%Y-%m-%d %H:%M:%S")
     texto = str(id_numerico) + '-' + str(indice) + '--python'
@@ -170,4 +177,4 @@ def insert_log(conn, id_numerico: int, indice: str, programa: str, textolog: str
     cur = conn.cursor()
     cur.execute(query)
     conn.commit()
-    # logging.info( f"{texto}")
+    logging.info( f"{texto}")

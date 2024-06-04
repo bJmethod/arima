@@ -19,6 +19,7 @@ id_numerico= sys.argv[1]
 indice = sys.argv[2]
 
 
+
 logging.basicConfig(filename=f'{LOG_RUTE}/{id_numerico}_{indice}.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 conn = get_conn(host, db, user, password,port)
@@ -37,6 +38,8 @@ json_str = df.to_json(orient='records', lines=True)
 insert_log(conn, id_numerico, indice,'main.py', 'HISTORICO = '+json_str)
 json_str = Xt.to_json(orient='records', lines=True)
 insert_log(conn, id_numerico, indice,'main.py', 'XT = '+json_str)
+logging.info(f"historico {json_str}")
+
 
 ## estimate model
 model = model(Xt, True, [], True)
@@ -46,18 +49,21 @@ model.get_arima()
 anio_hasta = time_to_forecast.aniohasta.values[0]
 anio_desde = time_to_forecast.aniodesde.values[0]
 insert_log(conn, id_numerico, indice,'main.py', 'PROYECCION desde='+str(anio_desde)+ ' hasta='+str(anio_hasta))
+logging.info(f"proyeccion desde {anio_desde} hasta {anio_hasta}")
+
 
 steps_interpreted = interpret_steps(anio_desde, anio_hasta)
 steps = steps_interpreted["steps"]
-
+logging.info(f"LOG= forcasting for {steps} preiods ahead from {anio_desde} to {anio_hasta} ")
 insert_log(conn, id_numerico, indice,'main.py', 'Proy de '+str(steps)+ ' periodos en '+str(anio_desde)+ ' a '+str(anio_hasta))
+
 model.forecast(int(steps))
 
 valoresD = model.predictions if model.predictions is not None else insert_log(conn, id_numerico, indice,'main.py', 'No podemos predecir: id '+str(id_numerico)+ ' indice '+str(indice))
 valores = integrate_series(valoresD)
 
 insert_log(conn, id_numerico, indice,'main.py', 'Queremos insertar: '+str(valores))
-
+logging.info('Queremos insertar: '+str(valores))
 valor_ar, valor_i, valor_ma = model.model.order
 ## update values
 
