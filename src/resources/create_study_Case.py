@@ -15,10 +15,12 @@ def createStudycase(file: str, inidce: int) -> list:
     study_case.rename(columns ={'historicoporccomp':"valor"},inplace=True)
     steps_interpreted = interpret_steps(anio_desde, anio_hasta)
     steps = steps_interpreted["steps"]
-    X = study_case["valor"]
+    X = np.log(study_case["valor"])
+
     arima = model(X, True, [], False)
     arima.get_arima()
     arima.forecast(int(steps))
     valores = arima.predictions
+    integrate_series(valores)
     return valores
 

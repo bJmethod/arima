@@ -68,7 +68,7 @@ class model:
             try:
                 logging.info("estimating arima no season ")
                 model_no_season = auto_arima(self.xt, start_p=self.start, start_q=self.start,
-                                             max_p=self.max_order, max_q=self.max_order,
+                                             max_p=None, max_q=None,
                                              seasonal=self.seasonal,
                                              trace=False,
                                              error_action='ignore',
@@ -88,9 +88,8 @@ class model:
                                               start_q=self.start,
                                               start_P=self.start,
                                               D=self.D,
-                                              max_p=self.max_order,
-                                              max_q=self.max_order,
-                                              max_d=self.max_d,
+                                              max_p=None,
+                                              max_q=None,
                                               m=12,
                                               trace=False,
                                               error_action='ignore',

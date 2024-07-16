@@ -21,4 +21,15 @@ class testCompleteness(unittest.TestCase):
     def testUpdateMonthsConstantForecastCase(self):
         pass
     def testCasetoFail(self):
+        file = './resources/caso_prueba_1.csv'
+        createStudycase(file,1)
+        pass
+    def testCasetoFail2(self):
+        file = './resources/caso_prueba_2.csv'
+        createStudycase(file,1)
+        pass
+
+    def testCasetoFail3(self):
+        file = './resources/prueba_problemas.csv'
+        createStudycase(file, 1)
         pass

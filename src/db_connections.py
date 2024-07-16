@@ -91,6 +91,28 @@ def get_engine(conn):
     return engine
 
 
+# metodo que excluye año sin credito
+# cuando el maximo mes de un año no tiene credito, se excluye el año
+# verificar presencia de valores extremos
+# Verificar que ocurran 5 meses de un añ0
+#  caso afirmativo excluimos el año
+def excluir_anio_credito(df:pd.DataFrame,indice,id_numerico,conexionbd) -> object:
+    df = df.copy()
+
+    df['valor'] = df['valor'].astype(float)
+    df['anio'] = df['anio'].astype(int)
+    df['mes'] = df['mes'].astype(int)
+    stats_by_month = df[["anio", "valor"]].groupby('anio').describe()
+    stats_by_month = stats_by_month.reset_index()
+    stats_by_month.columns= [ 'anio','count','mean','min','std','25%','50%','75%','max']
+    years_to_exclude = list(stats_by_month.loc[stats_by_month["50%"]>300,"anio"].values)
+    result = df[~df.anio.isin(years_to_exclude)].copy()
+    #print(f"excluyendo los años sin credito {years_to_exclude} para el inidice {indice} y el id {id_numerico}")
+    #logging.info(f"excluyendo los años sin credito {years_to_exclude} para el inidice {indice} y el id {id_numerico}")
+    #insert_log(conexionbd, id_numerico,indice, 'db_connections.py', f"excluyendo los años sin credito {years_to_exclude} para el inidice {indice} el id {id_numerico}")
+    return {"cleaned_df":result, "years_excluded":years_to_exclude}
+
+
 def get_data(conexionbd, conn, id_numerico, indice):
     print(f'getting data for {id_numerico}')
     insert_log(conexionbd, id_numerico, indice, 'db_connections.py', 'Obtener datos para id=' + str(id_numerico))
@@ -105,6 +127,9 @@ def get_data(conexionbd, conn, id_numerico, indice):
 
     df = get_data_forecast(conn, anio_desde, anio_hasta,
                            indice)  ## GABRIEL se pasa indice para obtener los datos del historico
+    ## aqui tengo que agregar el metodo que excluya el año cuando no tenga credito
+
+
 
     insert_log(conexionbd, id_numerico, indice, 'db_connections.py',
                'Fin get dato anio_desde = ' + str(anio_desde) + ' anio_hasta = ' + str(anio_hasta) + ' indice ' + str(
@@ -113,7 +138,7 @@ def get_data(conexionbd, conn, id_numerico, indice):
     # df tiene N anos y N meses, pero puede que no este completo (N anos*18)
     # Create a DataFrame with all possible combinations of years and months
     df2 = complete_series(anio_desde, anio_hasta, df)
-
+    df2 = excluir_anio_credito(df2, indice, id_numerico, conexionbd)["cleaned_df"]
     pr_time = get_forecast_year(conn, id_numerico)
     to_log = [pr_time, df2]
     str_case = ["Anios para forecast= ","Agregado de 0= "]
