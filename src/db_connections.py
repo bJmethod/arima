@@ -108,8 +108,9 @@ def excluir_anio_credito(df:pd.DataFrame,indice,id_numerico,conexionbd) -> objec
     years_to_exclude = list(stats_by_month.loc[stats_by_month["50%"]>300,"anio"].values)
     result = df[~df.anio.isin(years_to_exclude)].copy()
     #print(f"excluyendo los años sin credito {years_to_exclude} para el inidice {indice} y el id {id_numerico}")
-    #logging.info(f"excluyendo los años sin credito {years_to_exclude} para el inidice {indice} y el id {id_numerico}")
-    #insert_log(conexionbd, id_numerico,indice, 'db_connections.py', f"excluyendo los años sin credito {years_to_exclude} para el inidice {indice} el id {id_numerico}")
+    logging.info(f"excluyendo los años sin credito {years_to_exclude} para el inidice {indice} y el id {id_numerico}")
+    insert_log(conexionbd, id_numerico,indice, 'db_connections.py', f"excluyendo los años sin credito {years_to_exclude} para el inidice {indice} el id {id_numerico}")
+    # excluye años con valores extremos
     return {"cleaned_df":result, "years_excluded":years_to_exclude}
 
 
@@ -138,6 +139,7 @@ def get_data(conexionbd, conn, id_numerico, indice):
     # df tiene N anos y N meses, pero puede que no este completo (N anos*18)
     # Create a DataFrame with all possible combinations of years and months
     df2 = complete_series(anio_desde, anio_hasta, df)
+    # despues de completar la serie, se excluyen los años sin credito
     df2 = excluir_anio_credito(df2, indice, id_numerico, conexionbd)["cleaned_df"]
     pr_time = get_forecast_year(conn, id_numerico)
     to_log = [pr_time, df2]

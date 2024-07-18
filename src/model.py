@@ -58,7 +58,6 @@ class model:
 
             }
             D, try_season = self.get_minimum_spec_auto()
-            self.max_order = 4
             self.max_d = 2
             self.seasonal = False
             self.start = 1
@@ -68,6 +67,7 @@ class model:
             try:
                 logging.info("estimating arima no season ")
                 model_no_season = auto_arima(self.xt, start_p=self.start, start_q=self.start,
+                                            # orden de ar y ma libre
                                              max_p=None, max_q=None,
                                              seasonal=self.seasonal,
                                              trace=False,

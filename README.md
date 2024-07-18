@@ -25,9 +25,12 @@ spec:una lista que especifica el orden de la serie
 si auto = True no hay que proporcionarla,
 season: bool
 
-## TODO: agregar esquema basico
+## version 18_07_2024
 
-## TODO: agregar plug para conceccion a base de datos
+Lo nuevo:
+En  db_connections
+Agregamos el metodo excluir_anio_credito, busca años con valores atpicos tales que su masa afecte la mediana, 
+estos años suelen ser aquellos que afectan el resultado del modelo,
+los excluye cuando lo invoca get_data  y loggea el resultado de los años excluidos por tupla.
 
-
-## TODO: Agregar test unitarios
+En model dejamos libre la busqueda de los parametros AR MA.
