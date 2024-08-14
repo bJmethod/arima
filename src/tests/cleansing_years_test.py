@@ -30,9 +30,9 @@ class testCleansingYears(unittest.TestCase):
         from src.model import model
         from src.utils import integrate_series
 
-        file = './resources/Problema1.csv'
+        file = './resources/test_gretl2.csv'
         df = pd.read_csv(file)
-        df.rename(columns={"porcentaje":"valor"}, inplace=True)
+        df.rename(columns={"PORCENTAJE ACCS":"valor", "Año":"anio", "Mes":"mes"}, inplace=True)
         cleaning_years = excluir_anio_credito(df, 1,2,'conn')
         data_cleaned = cleaning_years["cleaned_df"]
         Xt = data_cleaned["valor"]
@@ -40,8 +40,12 @@ class testCleansingYears(unittest.TestCase):
         model = model(Xt, True, [], True)
         model.get_arima()
         model.forecast(18)
-        valoresD = model.predictions
-        valores = integrate_series(valoresD)
+        valoresD= model.predictions
+        valores = integrate_series(valoresD, Xt)
+
+        params = model.manual.summary()
+
+        #stats_df.to_csv('model_stats.csv', index=False)
         min_f =min(valores)
         max_f = max(valores)
         self.assertTrue(min_f<100)

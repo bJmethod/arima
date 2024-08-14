@@ -1,4 +1,10 @@
 {
   "tests/test_inserts.py": true,
-  "tests/.pytest_cache/test_completness_historical.py::testCompleteness::testHistoricalData": true
+  "tests/.pytest_cache/test_completness_historical.py::testCompleteness::testHistoricalData": true,
+  "tests/test_completness_historical.py::testCompleteness::testCasetoFail": true,
+  "tests/test_completness_historical.py::testCompleteness::testCasetoFail2": true,
+  "tests/test_completness_historical.py::testCompleteness::testCasetoFail3": true,
+  "tests/cleansing_years_test.py::testCleansingYears::testCleanedData": true,
+  "tests/cleansing_years_test.py": true,
+  "tests/cleansing_years_test.py::testCleansingYears::testForecastWithClenedData": true
 }

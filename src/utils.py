@@ -24,12 +24,13 @@ def find_notFound_month_by_year(df, inicio, fin):
     return missing_p
 
 
-
-def integrate_series(signal):
+## ahora recibimos la serie y extraemos el ultimo valor para el calculo del resultado del proceso
+def integrate_series(signal,Xt):
     signal_new= np.zeros(len(signal))
+    last_value = Xt.iloc[-1]
     for period in range(len(signal)):
-        if period % 18 - 1 < 0:
-            signal_new[period] = signal[period]
+        if period==0:
+            signal_new[period] = signal[period]+last_value
         else:
             signal_new[period] = (signal[period] + signal_new[period - 1])
     return signal_new

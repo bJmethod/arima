@@ -1,6 +1,12 @@
 [
   "test_modelos.py::TestModelos::test_forecast_error",
   "tests/.pytest_cache/test_completness_historical.py::testCompleteness::testHistoricalData",
+  "tests/cleansing_years_test.py::testCleansingYears::testCleanedData",
+  "tests/cleansing_years_test.py::testCleansingYears::testClensingYears",
+  "tests/cleansing_years_test.py::testCleansingYears::testForecastWithClenedData",
+  "tests/test_completness_historical.py::testCompleteness::testCasetoFail",
+  "tests/test_completness_historical.py::testCompleteness::testCasetoFail2",
+  "tests/test_completness_historical.py::testCompleteness::testCasetoFail3",
   "tests/test_completness_historical.py::testCompleteness::testHistoricalData",
   "tests/test_inserts.py::Testupdates::testError",
   "tests/test_inserts.py::Testupdates::testFakeInserts",

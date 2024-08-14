@@ -1,0 +1,944 @@
+2024-07-18 13:16:53,576 - INFO - 0-0--python
+2024-07-18 13:16:53,576 - INFO - Conectamos a BD, localhost test postgres 5432
+2024-07-18 13:16:53,614 - INFO - 50-1480--python
+2024-07-18 13:16:53,716 - INFO - anio_desde historico = 2016
+2024-07-18 13:16:53,716 - INFO - anio_hasta historico = 2022
+2024-07-18 13:16:53,717 - INFO - 50-1480--python
+2024-07-18 13:16:53,727 - INFO - 50-1480--python
+2024-07-18 13:16:53,728 - INFO - finishing geting data 2016 2022 and indice 1480
+2024-07-18 13:16:53,761 - INFO - excluyendo los años sin credito [] para el inidice 1480 y el id 50
+2024-07-18 13:16:53,762 - INFO - 50-1480--python
+2024-07-18 13:16:53,766 - INFO - 50-1480--python
+2024-07-18 13:16:53,766 - INFO - Anios para forecast= {"aniodesde":2024,"aniohasta":2024}
+
+2024-07-18 13:16:53,768 - INFO - 50-1480--python
+2024-07-18 13:16:53,768 - INFO - Agregado de 0= {"anio":2016,"mes":1,"valor":0.0}
+{"anio":2016,"mes":2,"valor":0.0}
+{"anio":2016,"mes":3,"valor":0.0}
+{"anio":2016,"mes":4,"valor":0.0}
+{"anio":2016,"mes":5,"valor":0.0}
+{"anio":2016,"mes":6,"valor":0.0}
+{"anio":2016,"mes":7,"valor":0.0}
+{"anio":2016,"mes":8,"valor":0.0}
+{"anio":2016,"mes":9,"valor":0.0}
+{"anio":2016,"mes":10,"valor":0.0}
+{"anio":2016,"mes":11,"valor":0.0}
+{"anio":2016,"mes":12,"valor":0.0}
+{"anio":2016,"mes":13,"valor":0.0}
+{"anio":2016,"mes":14,"valor":0.0}
+{"anio":2016,"mes":15,"valor":0.0}
+{"anio":2016,"mes":16,"valor":0.0}
+{"anio":2016,"mes":17,"valor":0.0}
+{"anio":2016,"mes":18,"valor":0.0}
+{"anio":2017,"mes":1,"valor":0.0}
+{"anio":2017,"mes":2,"valor":13.281}
+{"anio":2017,"mes":3,"valor":23.571}
+{"anio":2017,"mes":4,"valor":32.857}
+{"anio":2017,"mes":5,"valor":41.429}
+{"anio":2017,"mes":6,"valor":48.571}
+{"anio":2017,"mes":7,"valor":55.714}
+{"anio":2017,"mes":8,"valor":60.667}
+{"anio":2017,"mes":9,"valor":68.667}
+{"anio":2017,"mes":10,"valor":76.667}
+{"anio":2017,"mes":11,"valor":84.667}
+{"anio":2017,"mes":12,"valor":93.333}
+{"anio":2017,"mes":13,"valor":100.0}
+{"anio":2017,"mes":14,"valor":100.0}
+{"anio":2017,"mes":15,"valor":100.0}
+{"anio":2017,"mes":16,"valor":100.0}
+{"anio":2017,"mes":17,"valor":100.0}
+{"anio":2017,"mes":18,"valor":100.0}
+{"anio":2018,"mes":1,"valor":0.0}
+{"anio":2018,"mes":2,"valor":0.0}
+{"anio":2018,"mes":3,"valor":0.0}
+{"anio":2018,"mes":4,"valor":0.0}
+{"anio":2018,"mes":5,"valor":0.0}
+{"anio":2018,"mes":6,"valor":0.0}
+{"anio":2018,"mes":7,"valor":0.0}
+{"anio":2018,"mes":8,"valor":0.0}
+{"anio":2018,"mes":9,"valor":0.0}
+{"anio":2018,"mes":10,"valor":0.0}
+{"anio":2018,"mes":11,"valor":0.0}
+{"anio":2018,"mes":12,"valor":0.0}
+{"anio":2018,"mes":13,"valor":0.0}
+{"anio":2018,"mes":14,"valor":0.0}
+{"anio":2018,"mes":15,"valor":0.0}
+{"anio":2018,"mes":16,"valor":0.0}
+{"anio":2018,"mes":17,"valor":0.0}
+{"anio":2018,"mes":18,"valor":0.0}
+{"anio":2019,"mes":1,"valor":0.0}
+{"anio":2019,"mes":2,"valor":25.0}
+{"anio":2019,"mes":3,"valor":50.0}
+{"anio":2019,"mes":4,"valor":91.667}
+{"anio":2019,"mes":5,"valor":93.333}
+{"anio":2019,"mes":6,"valor":94.444}
+{"anio":2019,"mes":7,"valor":105.556}
+{"anio":2019,"mes":8,"valor":105.556}
+{"anio":2019,"mes":9,"valor":95.0}
+{"anio":2019,"mes":10,"valor":90.476}
+{"anio":2019,"mes":11,"valor":95.833}
+{"anio":2019,"mes":12,"valor":92.0}
+{"anio":2019,"mes":13,"valor":96.0}
+{"anio":2019,"mes":14,"valor":100.0}
+{"anio":2019,"mes":15,"valor":100.0}
+{"anio":2019,"mes":16,"valor":100.0}
+{"anio":2019,"mes":17,"valor":100.0}
+{"anio":2019,"mes":18,"valor":100.0}
+{"anio":2020,"mes":1,"valor":0.0}
+{"anio":2020,"mes":2,"valor":22.222}
+{"anio":2020,"mes":3,"valor":42.857}
+{"anio":2020,"mes":4,"valor":66.667}
+{"anio":2020,"mes":5,"valor":71.429}
+{"anio":2020,"mes":6,"valor":72.0}
+{"anio":2020,"mes":7,"valor":78.571}
+{"anio":2020,"mes":8,"valor":80.645}
+{"anio":2020,"mes":9,"valor":90.323}
+{"anio":2020,"mes":10,"valor":93.939}
+{"anio":2020,"mes":11,"valor":94.286}
+{"anio":2020,"mes":12,"valor":94.595}
+{"anio":2020,"mes":13,"valor":100.0}
+{"anio":2020,"mes":14,"valor":100.0}
+{"anio":2020,"mes":15,"valor":100.0}
+{"anio":2020,"mes":16,"valor":100.0}
+{"anio":2020,"mes":17,"valor":100.0}
+{"anio":2020,"mes":18,"valor":100.0}
+{"anio":2021,"mes":1,"valor":0.0}
+{"anio":2021,"mes":2,"valor":37.5}
+{"anio":2021,"mes":3,"valor":53.846}
+{"anio":2021,"mes":4,"valor":75.0}
+{"anio":2021,"mes":5,"valor":75.0}
+{"anio":2021,"mes":6,"valor":79.167}
+{"anio":2021,"mes":7,"valor":88.462}
+{"anio":2021,"mes":8,"valor":92.857}
+{"anio":2021,"mes":9,"valor":90.0}
+{"anio":2021,"mes":10,"valor":93.75}
+{"anio":2021,"mes":11,"valor":91.429}
+{"anio":2021,"mes":12,"valor":92.105}
+{"anio":2021,"mes":13,"valor":100.0}
+{"anio":2021,"mes":14,"valor":100.0}
+{"anio":2021,"mes":15,"valor":100.0}
+{"anio":2021,"mes":16,"valor":100.0}
+{"anio":2021,"mes":17,"valor":100.0}
+{"anio":2021,"mes":18,"valor":100.0}
+{"anio":2022,"mes":1,"valor":0.0}
+{"anio":2022,"mes":2,"valor":50.0}
+{"anio":2022,"mes":3,"valor":57.143}
+{"anio":2022,"mes":4,"valor":82.353}
+{"anio":2022,"mes":5,"valor":85.0}
+{"anio":2022,"mes":6,"valor":83.333}
+{"anio":2022,"mes":7,"valor":85.185}
+{"anio":2022,"mes":8,"valor":90.0}
+{"anio":2022,"mes":9,"valor":88.235}
+{"anio":2022,"mes":10,"valor":79.07}
+{"anio":2022,"mes":11,"valor":90.698}
+{"anio":2022,"mes":12,"valor":93.478}
+{"anio":2022,"mes":13,"valor":100.0}
+{"anio":2022,"mes":14,"valor":100.0}
+{"anio":2022,"mes":15,"valor":100.0}
+{"anio":2022,"mes":16,"valor":100.0}
+{"anio":2022,"mes":17,"valor":100.0}
+{"anio":2022,"mes":18,"valor":100.0}
+
+2024-07-18 13:16:53,769 - INFO - 50-1480--python
+2024-07-18 13:16:53,771 - INFO - 50-1480--python
+2024-07-18 13:16:53,771 - INFO - 50-1480--python
+2024-07-18 13:16:53,771 - INFO - historico 0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+13.281
+23.571
+32.857
+41.429
+48.571
+55.714
+60.667
+68.667
+76.667
+84.667
+93.333
+100.0
+100.0
+100.0
+100.0
+100.0
+100.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+25.0
+50.0
+91.667
+93.333
+94.444
+105.556
+105.556
+95.0
+90.476
+95.833
+92.0
+96.0
+100.0
+100.0
+100.0
+100.0
+100.0
+0.0
+22.222
+42.857
+66.667
+71.429
+72.0
+78.571
+80.645
+90.323
+93.939
+94.286
+94.595
+100.0
+100.0
+100.0
+100.0
+100.0
+100.0
+0.0
+37.5
+53.846
+75.0
+75.0
+79.167
+88.462
+92.857
+90.0
+93.75
+91.429
+92.105
+100.0
+100.0
+100.0
+100.0
+100.0
+100.0
+0.0
+50.0
+57.143
+82.353
+85.0
+83.333
+85.185
+90.0
+88.235
+79.07
+90.698
+93.478
+100.0
+100.0
+100.0
+100.0
+100.0
+100.0
+
+2024-07-18 13:16:53,773 - INFO - geting total obs
+2024-07-18 13:16:53,798 - INFO - estimating seasonal order using cannova-hansen test
+2024-07-18 13:16:53,799 - INFO - estimating arima no season 
+2024-07-18 13:17:03,231 - INFO - seasonal model was selected with aic893.855865848678
+2024-07-18 13:17:03,239 - INFO - 50-1480--python
+2024-07-18 13:17:03,239 - INFO - proyeccion desde 2024 hasta 2024
+2024-07-18 13:17:03,239 - INFO - LOG= forcasting for 18 preiods ahead from 2024 to 2024 
+2024-07-18 13:17:03,240 - INFO - 50-1480--python
+2024-07-18 13:17:03,247 - INFO - 50-1480--python
+2024-07-18 13:17:03,247 - INFO - Queremos insertar: [ 3.01227851  7.0553371  12.1505028  17.64254132 23.28819303 28.83202487
+ 34.15861887 39.20762583 43.97861716 48.50169469 52.82547587 57.00343818
+ 61.0863203  65.11705301 69.12872292 73.14434493 77.1779303  81.23619282]
+2024-07-18 13:17:03,248 - INFO - updating with 
+    update confarimaresultado set confarimaar=3,
+    confarimai= 0, confarimama= 1
+    where  confarimacabezalid= 50 and
+    confarimaindice= 1480
+     for 50
+2024-07-18 13:17:03,248 - INFO - 50-1480--python
+2024-07-18 13:17:03,253 - INFO - updated specs 50
+2024-07-18 13:17:03,253 - INFO -  update query 
+    update confarimaresultado set confarimaar=3,
+    confarimai= 0, confarimama= 1
+    where  confarimacabezalid= 50 and
+    confarimaindice= 1480
+    
+2024-07-18 13:17:03,253 - INFO - 50-1480--python
+2024-07-18 13:17:03,254 - INFO - finish load model info for 50 - 1480
+2024-07-18 13:17:03,255 - INFO - 50-1480--python
+2024-07-18 13:17:03,255 - INFO - 50-1480--python
+2024-07-18 13:17:03,255 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=3.012
+        where confarimacabezalid=50 and
+        confarimamodeloaplicadoindice= 1480
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 1
+
+     for 50
+2024-07-18 13:17:03,256 - INFO - 50-1480--python
+2024-07-18 13:17:03,261 - INFO - updated update_forecast 50
+2024-07-18 13:17:03,261 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=3.012
+        where confarimacabezalid=50 and
+        confarimamodeloaplicadoindice= 1480
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 1
+
+    
+2024-07-18 13:17:03,262 - INFO - 50-1480--python
+2024-07-18 13:17:03,262 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7.055
+        where confarimacabezalid=50 and
+        confarimamodeloaplicadoindice= 1480
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 2
+
+     for 50
+2024-07-18 13:17:03,263 - INFO - 50-1480--python
+2024-07-18 13:17:03,264 - INFO - updated update_forecast 50
+2024-07-18 13:17:03,264 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=7.055
+        where confarimacabezalid=50 and
+        confarimamodeloaplicadoindice= 1480
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 2
+
+    
+2024-07-18 13:17:03,265 - INFO - 50-1480--python
+2024-07-18 13:17:03,265 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=12.151
+        where confarimacabezalid=50 and
+        confarimamodeloaplicadoindice= 1480
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 3
+
+     for 50
+2024-07-18 13:17:03,265 - INFO - 50-1480--python
+2024-07-18 13:17:03,266 - INFO - updated update_forecast 50
+2024-07-18 13:17:03,266 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=12.151
+        where confarimacabezalid=50 and
+        confarimamodeloaplicadoindice= 1480
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 3
+
+    
+2024-07-18 13:17:03,267 - INFO - 50-1480--python
+2024-07-18 13:17:03,267 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=17.643
+        where confarimacabezalid=50 and
+        confarimamodeloaplicadoindice= 1480
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 4
+
+     for 50
+2024-07-18 13:17:03,268 - INFO - 50-1480--python
+2024-07-18 13:17:03,269 - INFO - updated update_forecast 50
+2024-07-18 13:17:03,269 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=17.643
+        where confarimacabezalid=50 and
+        confarimamodeloaplicadoindice= 1480
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 4
+
+    
+2024-07-18 13:17:03,269 - INFO - 50-1480--python
+2024-07-18 13:17:03,270 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=23.288
+        where confarimacabezalid=50 and
+        confarimamodeloaplicadoindice= 1480
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 5
+
+     for 50
+2024-07-18 13:17:03,270 - INFO - 50-1480--python
+2024-07-18 13:17:03,271 - INFO - updated update_forecast 50
+2024-07-18 13:17:03,271 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=23.288
+        where confarimacabezalid=50 and
+        confarimamodeloaplicadoindice= 1480
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 5
+
+    
+2024-07-18 13:17:03,272 - INFO - 50-1480--python
+2024-07-18 13:17:03,272 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=28.832
+        where confarimacabezalid=50 and
+        confarimamodeloaplicadoindice= 1480
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 6
+
+     for 50
+2024-07-18 13:17:03,273 - INFO - 50-1480--python
+2024-07-18 13:17:03,273 - INFO - updated update_forecast 50
+2024-07-18 13:17:03,273 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=28.832
+        where confarimacabezalid=50 and
+        confarimamodeloaplicadoindice= 1480
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 6
+
+    
+2024-07-18 13:17:03,274 - INFO - 50-1480--python
+2024-07-18 13:17:03,275 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=34.159
+        where confarimacabezalid=50 and
+        confarimamodeloaplicadoindice= 1480
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 7
+
+     for 50
+2024-07-18 13:17:03,275 - INFO - 50-1480--python
+2024-07-18 13:17:03,276 - INFO - updated update_forecast 50
+2024-07-18 13:17:03,276 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=34.159
+        where confarimacabezalid=50 and
+        confarimamodeloaplicadoindice= 1480
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 7
+
+    
+2024-07-18 13:17:03,277 - INFO - 50-1480--python
+2024-07-18 13:17:03,277 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=39.208
+        where confarimacabezalid=50 and
+        confarimamodeloaplicadoindice= 1480
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 8
+
+     for 50
+2024-07-18 13:17:03,278 - INFO - 50-1480--python
+2024-07-18 13:17:03,279 - INFO - updated update_forecast 50
+2024-07-18 13:17:03,279 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=39.208
+        where confarimacabezalid=50 and
+        confarimamodeloaplicadoindice= 1480
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 8
+
+    
+2024-07-18 13:17:03,280 - INFO - 50-1480--python
+2024-07-18 13:17:03,280 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=43.979
+        where confarimacabezalid=50 and
+        confarimamodeloaplicadoindice= 1480
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 9
+
+     for 50
+2024-07-18 13:17:03,280 - INFO - 50-1480--python
+2024-07-18 13:17:03,281 - INFO - updated update_forecast 50
+2024-07-18 13:17:03,281 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=43.979
+        where confarimacabezalid=50 and
+        confarimamodeloaplicadoindice= 1480
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 9
+
+    
+2024-07-18 13:17:03,282 - INFO - 50-1480--python
+2024-07-18 13:17:03,282 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=48.502
+        where confarimacabezalid=50 and
+        confarimamodeloaplicadoindice= 1480
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 10
+
+     for 50
+2024-07-18 13:17:03,283 - INFO - 50-1480--python
+2024-07-18 13:17:03,283 - INFO - updated update_forecast 50
+2024-07-18 13:17:03,284 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=48.502
+        where confarimacabezalid=50 and
+        confarimamodeloaplicadoindice= 1480
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 10
+
+    
+2024-07-18 13:17:03,284 - INFO - 50-1480--python
+2024-07-18 13:17:03,284 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=52.825
+        where confarimacabezalid=50 and
+        confarimamodeloaplicadoindice= 1480
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 11
+
+     for 50
+2024-07-18 13:17:03,285 - INFO - 50-1480--python
+2024-07-18 13:17:03,286 - INFO - updated update_forecast 50
+2024-07-18 13:17:03,286 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=52.825
+        where confarimacabezalid=50 and
+        confarimamodeloaplicadoindice= 1480
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 11
+
+    
+2024-07-18 13:17:03,287 - INFO - 50-1480--python
+2024-07-18 13:17:03,287 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=57.003
+        where confarimacabezalid=50 and
+        confarimamodeloaplicadoindice= 1480
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 12
+
+     for 50
+2024-07-18 13:17:03,287 - INFO - 50-1480--python
+2024-07-18 13:17:03,288 - INFO - updated update_forecast 50
+2024-07-18 13:17:03,288 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=57.003
+        where confarimacabezalid=50 and
+        confarimamodeloaplicadoindice= 1480
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 12
+
+    
+2024-07-18 13:17:03,289 - INFO - 50-1480--python
+2024-07-18 13:17:03,289 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=61.086
+        where confarimacabezalid=50 and
+        confarimamodeloaplicadoindice= 1480
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 13
+
+     for 50
+2024-07-18 13:17:03,290 - INFO - 50-1480--python
+2024-07-18 13:17:03,291 - INFO - updated update_forecast 50
+2024-07-18 13:17:03,291 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=61.086
+        where confarimacabezalid=50 and
+        confarimamodeloaplicadoindice= 1480
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 13
+
+    
+2024-07-18 13:17:03,292 - INFO - 50-1480--python
+2024-07-18 13:17:03,292 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=65.117
+        where confarimacabezalid=50 and
+        confarimamodeloaplicadoindice= 1480
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 14
+
+     for 50
+2024-07-18 13:17:03,292 - INFO - 50-1480--python
+2024-07-18 13:17:03,293 - INFO - updated update_forecast 50
+2024-07-18 13:17:03,293 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=65.117
+        where confarimacabezalid=50 and
+        confarimamodeloaplicadoindice= 1480
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 14
+
+    
+2024-07-18 13:17:03,294 - INFO - 50-1480--python
+2024-07-18 13:17:03,294 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=69.129
+        where confarimacabezalid=50 and
+        confarimamodeloaplicadoindice= 1480
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 15
+
+     for 50
+2024-07-18 13:17:03,295 - INFO - 50-1480--python
+2024-07-18 13:17:03,295 - INFO - updated update_forecast 50
+2024-07-18 13:17:03,296 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=69.129
+        where confarimacabezalid=50 and
+        confarimamodeloaplicadoindice= 1480
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 15
+
+    
+2024-07-18 13:17:03,296 - INFO - 50-1480--python
+2024-07-18 13:17:03,296 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=73.144
+        where confarimacabezalid=50 and
+        confarimamodeloaplicadoindice= 1480
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 16
+
+     for 50
+2024-07-18 13:17:03,297 - INFO - 50-1480--python
+2024-07-18 13:17:03,298 - INFO - updated update_forecast 50
+2024-07-18 13:17:03,298 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=73.144
+        where confarimacabezalid=50 and
+        confarimamodeloaplicadoindice= 1480
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 16
+
+    
+2024-07-18 13:17:03,299 - INFO - 50-1480--python
+2024-07-18 13:17:03,299 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=77.178
+        where confarimacabezalid=50 and
+        confarimamodeloaplicadoindice= 1480
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 17
+
+     for 50
+2024-07-18 13:17:03,300 - INFO - 50-1480--python
+2024-07-18 13:17:03,300 - INFO - updated update_forecast 50
+2024-07-18 13:17:03,300 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=77.178
+        where confarimacabezalid=50 and
+        confarimamodeloaplicadoindice= 1480
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 17
+
+    
+2024-07-18 13:17:03,301 - INFO - 50-1480--python
+2024-07-18 13:17:03,301 - INFO - updating with  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=81.236
+        where confarimacabezalid=50 and
+        confarimamodeloaplicadoindice= 1480
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 18
+
+     for 50
+2024-07-18 13:17:03,302 - INFO - 50-1480--python
+2024-07-18 13:17:03,303 - INFO - updated update_forecast 50
+2024-07-18 13:17:03,303 - INFO -  update query  
+        update confarimamodeloaplicado
+        set procesado=TRUE,
+        confarimamodeloaplicadoporc=81.236
+        where confarimacabezalid=50 and
+        confarimamodeloaplicadoindice= 1480
+        and confarimamodeloaplicadoanio = 2024 and confarimamodeloaplicadomes = 18
+
+    
+2024-08-13 19:10:18,952 - INFO - Conectamos a BD, localhost test postgres 5432
+2024-08-13 19:10:19,157 - INFO - anio_desde historico = 2016
+2024-08-13 19:10:19,157 - INFO - anio_hasta historico = 2022
+2024-08-13 19:10:19,181 - INFO - finishing geting data 2016 2022 and indice 1480
+2024-08-13 19:10:19,313 - INFO - Anios para forecast= {"aniodesde":2024,"aniohasta":2024}
+
+2024-08-13 19:10:19,314 - INFO - Agregado de 0= {"anio":2016,"mes":1,"valor":0.0}
+{"anio":2016,"mes":2,"valor":0.0}
+{"anio":2016,"mes":3,"valor":0.0}
+{"anio":2016,"mes":4,"valor":0.0}
+{"anio":2016,"mes":5,"valor":0.0}
+{"anio":2016,"mes":6,"valor":0.0}
+{"anio":2016,"mes":7,"valor":0.0}
+{"anio":2016,"mes":8,"valor":0.0}
+{"anio":2016,"mes":9,"valor":0.0}
+{"anio":2016,"mes":10,"valor":0.0}
+{"anio":2016,"mes":11,"valor":0.0}
+{"anio":2016,"mes":12,"valor":0.0}
+{"anio":2016,"mes":13,"valor":0.0}
+{"anio":2016,"mes":14,"valor":0.0}
+{"anio":2016,"mes":15,"valor":0.0}
+{"anio":2016,"mes":16,"valor":0.0}
+{"anio":2016,"mes":17,"valor":0.0}
+{"anio":2016,"mes":18,"valor":0.0}
+{"anio":2017,"mes":1,"valor":0.0}
+{"anio":2017,"mes":2,"valor":13.281}
+{"anio":2017,"mes":3,"valor":23.571}
+{"anio":2017,"mes":4,"valor":32.857}
+{"anio":2017,"mes":5,"valor":41.429}
+{"anio":2017,"mes":6,"valor":48.571}
+{"anio":2017,"mes":7,"valor":55.714}
+{"anio":2017,"mes":8,"valor":60.667}
+{"anio":2017,"mes":9,"valor":68.667}
+{"anio":2017,"mes":10,"valor":76.667}
+{"anio":2017,"mes":11,"valor":84.667}
+{"anio":2017,"mes":12,"valor":93.333}
+{"anio":2017,"mes":13,"valor":100.0}
+{"anio":2017,"mes":14,"valor":100.0}
+{"anio":2017,"mes":15,"valor":100.0}
+{"anio":2017,"mes":16,"valor":100.0}
+{"anio":2017,"mes":17,"valor":100.0}
+{"anio":2017,"mes":18,"valor":100.0}
+{"anio":2018,"mes":1,"valor":0.0}
+{"anio":2018,"mes":2,"valor":0.0}
+{"anio":2018,"mes":3,"valor":0.0}
+{"anio":2018,"mes":4,"valor":0.0}
+{"anio":2018,"mes":5,"valor":0.0}
+{"anio":2018,"mes":6,"valor":0.0}
+{"anio":2018,"mes":7,"valor":0.0}
+{"anio":2018,"mes":8,"valor":0.0}
+{"anio":2018,"mes":9,"valor":0.0}
+{"anio":2018,"mes":10,"valor":0.0}
+{"anio":2018,"mes":11,"valor":0.0}
+{"anio":2018,"mes":12,"valor":0.0}
+{"anio":2018,"mes":13,"valor":0.0}
+{"anio":2018,"mes":14,"valor":0.0}
+{"anio":2018,"mes":15,"valor":0.0}
+{"anio":2018,"mes":16,"valor":0.0}
+{"anio":2018,"mes":17,"valor":0.0}
+{"anio":2018,"mes":18,"valor":0.0}
+{"anio":2019,"mes":1,"valor":0.0}
+{"anio":2019,"mes":2,"valor":25.0}
+{"anio":2019,"mes":3,"valor":50.0}
+{"anio":2019,"mes":4,"valor":91.667}
+{"anio":2019,"mes":5,"valor":93.333}
+{"anio":2019,"mes":6,"valor":94.444}
+{"anio":2019,"mes":7,"valor":105.556}
+{"anio":2019,"mes":8,"valor":105.556}
+{"anio":2019,"mes":9,"valor":95.0}
+{"anio":2019,"mes":10,"valor":90.476}
+{"anio":2019,"mes":11,"valor":95.833}
+{"anio":2019,"mes":12,"valor":92.0}
+{"anio":2019,"mes":13,"valor":96.0}
+{"anio":2019,"mes":14,"valor":100.0}
+{"anio":2019,"mes":15,"valor":100.0}
+{"anio":2019,"mes":16,"valor":100.0}
+{"anio":2019,"mes":17,"valor":100.0}
+{"anio":2019,"mes":18,"valor":100.0}
+{"anio":2020,"mes":1,"valor":0.0}
+{"anio":2020,"mes":2,"valor":22.222}
+{"anio":2020,"mes":3,"valor":42.857}
+{"anio":2020,"mes":4,"valor":66.667}
+{"anio":2020,"mes":5,"valor":71.429}
+{"anio":2020,"mes":6,"valor":72.0}
+{"anio":2020,"mes":7,"valor":78.571}
+{"anio":2020,"mes":8,"valor":80.645}
+{"anio":2020,"mes":9,"valor":90.323}
+{"anio":2020,"mes":10,"valor":93.939}
+{"anio":2020,"mes":11,"valor":94.286}
+{"anio":2020,"mes":12,"valor":94.595}
+{"anio":2020,"mes":13,"valor":100.0}
+{"anio":2020,"mes":14,"valor":100.0}
+{"anio":2020,"mes":15,"valor":100.0}
+{"anio":2020,"mes":16,"valor":100.0}
+{"anio":2020,"mes":17,"valor":100.0}
+{"anio":2020,"mes":18,"valor":100.0}
+{"anio":2021,"mes":1,"valor":0.0}
+{"anio":2021,"mes":2,"valor":37.5}
+{"anio":2021,"mes":3,"valor":53.846}
+{"anio":2021,"mes":4,"valor":75.0}
+{"anio":2021,"mes":5,"valor":75.0}
+{"anio":2021,"mes":6,"valor":79.167}
+{"anio":2021,"mes":7,"valor":88.462}
+{"anio":2021,"mes":8,"valor":92.857}
+{"anio":2021,"mes":9,"valor":90.0}
+{"anio":2021,"mes":10,"valor":93.75}
+{"anio":2021,"mes":11,"valor":91.429}
+{"anio":2021,"mes":12,"valor":92.105}
+{"anio":2021,"mes":13,"valor":100.0}
+{"anio":2021,"mes":14,"valor":100.0}
+{"anio":2021,"mes":15,"valor":100.0}
+{"anio":2021,"mes":16,"valor":100.0}
+{"anio":2021,"mes":17,"valor":100.0}
+{"anio":2021,"mes":18,"valor":100.0}
+{"anio":2022,"mes":1,"valor":0.0}
+{"anio":2022,"mes":2,"valor":50.0}
+{"anio":2022,"mes":3,"valor":57.143}
+{"anio":2022,"mes":4,"valor":82.353}
+{"anio":2022,"mes":5,"valor":85.0}
+{"anio":2022,"mes":6,"valor":83.333}
+{"anio":2022,"mes":7,"valor":85.185}
+{"anio":2022,"mes":8,"valor":90.0}
+{"anio":2022,"mes":9,"valor":88.235}
+{"anio":2022,"mes":10,"valor":79.07}
+{"anio":2022,"mes":11,"valor":90.698}
+{"anio":2022,"mes":12,"valor":93.478}
+{"anio":2022,"mes":13,"valor":100.0}
+{"anio":2022,"mes":14,"valor":100.0}
+{"anio":2022,"mes":15,"valor":100.0}
+{"anio":2022,"mes":16,"valor":100.0}
+{"anio":2022,"mes":17,"valor":100.0}
+{"anio":2022,"mes":18,"valor":100.0}
+
+2024-08-13 19:10:19,316 - INFO - historico 0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+13.281
+23.571
+32.857
+41.429
+48.571
+55.714
+60.667
+68.667
+76.667
+84.667
+93.333
+100.0
+100.0
+100.0
+100.0
+100.0
+100.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+25.0
+50.0
+91.667
+93.333
+94.444
+105.556
+105.556
+95.0
+90.476
+95.833
+92.0
+96.0
+100.0
+100.0
+100.0
+100.0
+100.0
+0.0
+22.222
+42.857
+66.667
+71.429
+72.0
+78.571
+80.645
+90.323
+93.939
+94.286
+94.595
+100.0
+100.0
+100.0
+100.0
+100.0
+100.0
+0.0
+37.5
+53.846
+75.0
+75.0
+79.167
+88.462
+92.857
+90.0
+93.75
+91.429
+92.105
+100.0
+100.0
+100.0
+100.0
+100.0
+100.0
+0.0
+50.0
+57.143
+82.353
+85.0
+83.333
+85.185
+90.0
+88.235
+79.07
+90.698
+93.478
+100.0
+100.0
+100.0
+100.0
+100.0
+100.0
+
+2024-08-13 19:10:19,325 - INFO - geting total obs
+2024-08-13 19:10:19,386 - INFO - estimating seasonal order using cannova-hansen test
+2024-08-13 19:10:19,386 - INFO - estimating arima no season 
+2024-08-13 19:10:41,621 - INFO - Best model selected: season with metrics AIC=1022.3744266084922, BIC=1033.6876815577014, R2=0.5365625212681233
+2024-08-13 19:10:41,621 - INFO - proyeccion desde 2024 hasta 2024
+2024-08-13 19:10:41,621 - INFO - LOG= forcasting for 18 preiods ahead from 2024 to 2024 

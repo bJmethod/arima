@@ -1,0 +1,16 @@
+# Comienza el historial 2024-08-03 15:46
+# Registro de las instrucciones de la sesión.  Por favor, tenga en
+# cuenta que probablemente necesitará editar este guion antes
+# de ejecutarlo.
+open \
+  C:\Users\Usuario\OneDrive\Documentos\projects\arima\src\resources\test_gretl2.csv
+setobs 18 2016:01 --special-time-series
+summary PORCENTAJEACCS
+pergm PORCENTAJEACCS 18 --bartlett
+corrgm PORCENTAJEACCS 18
+diff PORCENTAJEACCS
+corrgm d_PORCENTAJEACCS 18
+# modelo 1
+arima 4 0 3 ; 1 0 0 ; d_PORCENTAJEACCS
+dataset addobs 18
+fcast 2023:01 2023:18

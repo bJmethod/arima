@@ -4,7 +4,7 @@
 import configparser
 def sensitive_dict():
     config = configparser.ConfigParser()
-    config.read('C:/Users/Usuario/Documents/projects/arima/config.ini')
+    config.read('C:/Users/Usuario/oneDrive/Documentos/projects/arima/config.ini')
     database_host = config['DEFAULT']['HOST']
     database_puerto = config['DEFAULT']['PORT']
     database_base = config['DEFAULT']['DB']

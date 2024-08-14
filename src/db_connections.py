@@ -107,9 +107,9 @@ def excluir_anio_credito(df:pd.DataFrame,indice,id_numerico,conexionbd) -> objec
     stats_by_month.columns= [ 'anio','count','mean','min','std','25%','50%','75%','max']
     years_to_exclude = list(stats_by_month.loc[stats_by_month["50%"]>300,"anio"].values)
     result = df[~df.anio.isin(years_to_exclude)].copy()
-    #print(f"excluyendo los años sin credito {years_to_exclude} para el inidice {indice} y el id {id_numerico}")
-    logging.info(f"excluyendo los años sin credito {years_to_exclude} para el inidice {indice} y el id {id_numerico}")
-    insert_log(conexionbd, id_numerico,indice, 'db_connections.py', f"excluyendo los años sin credito {years_to_exclude} para el inidice {indice} el id {id_numerico}")
+    print(f"excluyendo los años sin credito {years_to_exclude} para el inidice {indice} y el id {id_numerico}")
+    #logging.info(f"excluyendo los años sin credito {years_to_exclude} para el inidice {indice} y el id {id_numerico}")
+  #  insert_log(conexionbd, id_numerico,indice, 'db_connections.py', f"excluyendo los años sin credito {years_to_exclude} para el inidice {indice} el id {id_numerico}")
     # excluye años con valores extremos
     return {"cleaned_df":result, "years_excluded":years_to_exclude}
 
@@ -201,7 +201,7 @@ def insert_log(conn, id_numerico: str, indice: str, programa: str, textolog: str
     INSERT INTO log (logfecha, logversion, logusuario, logprograma, logdescripcion) VALUES 
     ('{fecha_hora_formato}', '1', '{texto}', '{programa}', '{textolog}');
     '''
-    cur = conn.cursor()
-    cur.execute(query)
-    conn.commit()
-    logging.info( f"{texto}")
+    #cur = conn.cursor()
+    #cur.execute(query)
+    #conn.commit()
+    #logging.info( f"{texto}")

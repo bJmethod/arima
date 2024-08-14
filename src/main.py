@@ -1,7 +1,4 @@
 import sys
-
-import pandas as pd
-
 from model import model
 from sensitive import sensitive_dict
 from db_connections import get_data, get_conn,load_forecast_info,load_forecast_values, get_engine, insert_log
@@ -60,7 +57,7 @@ insert_log(conn, id_numerico, indice,'main.py', 'Proy de '+str(steps)+ ' periodo
 model.forecast(int(steps))
 
 valoresD = model.predictions if model.predictions is not None else insert_log(conn, id_numerico, indice,'main.py', 'No podemos predecir: id '+str(id_numerico)+ ' indice '+str(indice))
-valores = integrate_series(valoresD)
+valores = integrate_series(valoresD, Xt)
 
 insert_log(conn, id_numerico, indice,'main.py', 'Queremos insertar: '+str(valores))
 logging.info('Queremos insertar: '+str(valores))
