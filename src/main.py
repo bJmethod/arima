@@ -61,7 +61,7 @@ valores = integrate_series(valoresD, Xt)
 
 insert_log(conn, id_numerico, indice,'main.py', 'Queremos insertar: '+str(valores))
 logging.info('Queremos insertar: '+str(valores))
-valor_ar, valor_i, valor_ma = model.model.order
+valor_ar, valor_i, valor_ma = model.manual.order
 ## update values
 
 id = int(id_numerico)
