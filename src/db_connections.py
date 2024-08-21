@@ -138,18 +138,18 @@ def get_data(conexionbd, conn, id_numerico, indice):
     logging.info(f'finishing geting data {anio_desde} {anio_hasta} and indice {indice}')
     # df tiene N anos y N meses, pero puede que no este completo (N anos*18)
     # Create a DataFrame with all possible combinations of years and months
-    df2 = complete_series(anio_desde, anio_hasta, df)
+    #df2 = complete_series(anio_desde, anio_hasta, df)
     # despues de completar la serie, se excluyen los años sin credito
-    df2 = excluir_anio_credito(df2, indice, id_numerico, conexionbd)["cleaned_df"]
+    #df2 = excluir_anio_credito(df2, indice, id_numerico, conexionbd)["cleaned_df"]
     pr_time = get_forecast_year(conn, id_numerico)
-    to_log = [pr_time, df2]
+    to_log = [pr_time, df]
     str_case = ["Anios para forecast= ","Agregado de 0= "]
 
     for i in range(2):
         json_str = to_log[i].to_json(orient='records', lines=True)
         insert_log(conexionbd, id_numerico, indice, 'db_connections.py', f'{str_case[i]}' + str(json_str))
         logging.info(f'{str_case[i]}' + str(json_str))
-    return {"data": df2,
+    return {"data": df,
             "ind_proyeccion": pr_time}
 
 

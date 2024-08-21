@@ -1,5 +1,6 @@
 import logging
 import numpy as np
+import pandas as pd
 from pmdarima.arima import auto_arima, ARIMA
 from pmdarima.arima.utils import nsdiffs
 
@@ -20,6 +21,8 @@ class model:
         self.auto = auto
         self.spec = spec
         self.season = season
+        self.fail = False
+        self.best_model = None
 
 
     def get_minimum_spec_auto(self):
@@ -94,6 +97,7 @@ class model:
                 self.no_season = model_no_season
                 models.append(('no_season', model_no_season))
             except Exception as e:
+                self.fail= True
                 logging.ERROR(f"model with no season was failed with exception {e}")
 
             ## podemos agregar la estimacion de D con el metodo de canova
@@ -119,6 +123,7 @@ class model:
                     self.model_season = model_season
                     models.append(('season', model_season))
                 except Exception as e:
+                    self.fail = True
                     logging.ERROR(f"model with season has failed {e}")
                 best_metrics = (
                 np.inf, np.inf, -np.inf)  # Initialize with infinite AIC and BIC, and negative infinite R2
@@ -134,6 +139,7 @@ class model:
             else:
                 print("model hasn't enought obs or variance to try seasonal spec")
                 logging.info(f"model hasn't enought obs {len(self.xt)} to try seasnal spec")
+
         else:
             if len(self.spec) > 0:
                 try:
@@ -161,16 +167,20 @@ class model:
                     print(f"parameter are wrongly setted {self.params}")
 
     def forecast(self, periods: int):
-        try:
-            order = self.best_model.order
-            seasonal_order = self.best_model.seasonal_order
-            ## forzamos estimacion de proceso arima sin intercepto
-            self.manual = ARIMA(order=order, seasonal_order=seasonal_order,with_intercept=False)
-            self.manual.fit(self.xt)
+        if not self.fail:
+            try:
+                order = self.best_model.order
+                seasonal_order = self.best_model.seasonal_order
+                ## forzamos estimacion de proceso arima sin intercepto
+                self.manual = ARIMA(order=order, seasonal_order=seasonal_order,with_intercept=False)
+                self.manual.fit(self.xt)
 
-            self.predictions = self.manual.predict(
-                n_periods=periods
-            )
-        except Exception as e:
-            print("no model was set or n periods ahead are unapropriate ")
-            logging.ERROR(f"exception raise {e}")
+                self.predictions = self.manual.predict(
+                    n_periods=periods
+                )
+            except Exception as e:
+                print("no model was set or n periods ahead are unapropriate ")
+                logging.ERROR(f"exception raise {e}")
+        else:
+            print("model was not setted")
+            logging.ERROR("model was not setted")

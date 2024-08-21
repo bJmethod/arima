@@ -1,0 +1,150 @@
+2024-08-19 22:57:05,155 - INFO - Conectamos a BD, localhost test postgres 5432
+2024-08-19 22:57:05,537 - INFO - anio_desde historico = 2022
+2024-08-19 22:57:05,537 - INFO - anio_hasta historico = 2022
+2024-08-19 22:57:05,563 - INFO - finishing geting data 2022 2022 and indice 9683
+2024-08-19 22:57:05,628 - INFO - Anios para forecast= {"aniodesde":2023,"aniohasta":2023}
+
+2024-08-19 22:57:05,629 - INFO - Agregado de 0= {"anio":2022,"mes":1,"valor":0.0}
+{"anio":2022,"mes":2,"valor":0.0}
+{"anio":2022,"mes":3,"valor":0.0}
+{"anio":2022,"mes":4,"valor":0.0}
+{"anio":2022,"mes":5,"valor":0.0}
+{"anio":2022,"mes":6,"valor":0.0}
+{"anio":2022,"mes":7,"valor":0.0}
+{"anio":2022,"mes":8,"valor":0.0}
+{"anio":2022,"mes":9,"valor":0.0}
+{"anio":2022,"mes":10,"valor":0.0}
+{"anio":2022,"mes":11,"valor":0.0}
+{"anio":2022,"mes":12,"valor":0.0}
+{"anio":2022,"mes":13,"valor":0.0}
+{"anio":2022,"mes":14,"valor":0.0}
+{"anio":2022,"mes":15,"valor":0.0}
+{"anio":2022,"mes":16,"valor":0.0}
+{"anio":2022,"mes":17,"valor":0.0}
+{"anio":2022,"mes":18,"valor":0.0}
+
+2024-08-19 22:57:05,630 - INFO - historico 0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+
+2024-08-19 22:57:05,631 - INFO - geting total obs
+2024-08-19 22:57:05,631 - INFO - estimating seasonal order using cannova-hansen test
+2024-08-19 22:57:05,632 - INFO - estimating arima no season 
+2024-08-19 22:57:05,718 - INFO - model hasn't enought obs 17 to try seasnal spec
+2024-08-19 22:57:05,718 - INFO - proyeccion desde 2023 hasta 2023
+2024-08-19 22:57:05,718 - INFO - LOG= forcasting for 18 preiods ahead from 2023 to 2023 
+2024-08-20 19:06:15,600 - INFO - Conectamos a BD, localhost test postgres 5432
+2024-08-20 19:06:15,737 - INFO - anio_desde historico = 2022
+2024-08-20 19:06:15,738 - INFO - anio_hasta historico = 2022
+2024-08-20 19:06:15,755 - INFO - finishing geting data 2022 2022 and indice 9683
+2024-08-20 19:06:15,820 - INFO - Anios para forecast= {"aniodesde":2023,"aniohasta":2023}
+
+2024-08-20 19:06:15,821 - INFO - Agregado de 0= {"anio":2022,"mes":1,"valor":0.0}
+{"anio":2022,"mes":2,"valor":0.0}
+{"anio":2022,"mes":3,"valor":0.0}
+{"anio":2022,"mes":4,"valor":0.0}
+{"anio":2022,"mes":5,"valor":0.0}
+{"anio":2022,"mes":6,"valor":0.0}
+{"anio":2022,"mes":7,"valor":0.0}
+{"anio":2022,"mes":8,"valor":0.0}
+{"anio":2022,"mes":9,"valor":0.0}
+{"anio":2022,"mes":10,"valor":0.0}
+{"anio":2022,"mes":11,"valor":0.0}
+{"anio":2022,"mes":12,"valor":0.0}
+{"anio":2022,"mes":13,"valor":0.0}
+{"anio":2022,"mes":14,"valor":0.0}
+{"anio":2022,"mes":15,"valor":0.0}
+{"anio":2022,"mes":16,"valor":0.0}
+{"anio":2022,"mes":17,"valor":0.0}
+{"anio":2022,"mes":18,"valor":0.0}
+
+2024-08-20 19:06:15,822 - INFO - historico 0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+
+2024-08-20 19:06:15,827 - INFO - geting total obs
+2024-08-20 19:06:15,828 - INFO - estimating seasonal order using cannova-hansen test
+2024-08-20 19:06:15,829 - INFO - estimating arima no season 
+2024-08-20 19:06:16,055 - INFO - model hasn't enought obs 17 to try seasnal spec
+2024-08-20 19:06:16,056 - INFO - proyeccion desde 2023 hasta 2023
+2024-08-20 19:06:16,057 - INFO - LOG= forcasting for 18 preiods ahead from 2023 to 2023 
+2024-08-20 21:26:24,803 - INFO - Conectamos a BD, localhost test postgres 5432
+2024-08-20 21:26:24,939 - INFO - anio_desde historico = 2022
+2024-08-20 21:26:24,939 - INFO - anio_hasta historico = 2022
+2024-08-20 21:26:24,947 - INFO - finishing geting data 2022 2022 and indice 9683
+2024-08-20 21:26:24,970 - INFO - Anios para forecast= {"aniodesde":2023,"aniohasta":2023}
+
+2024-08-20 21:26:24,970 - INFO - Agregado de 0= {"anio":2022,"mes":1,"valor":0.0}
+{"anio":2022,"mes":2,"valor":0.0}
+{"anio":2022,"mes":3,"valor":0.0}
+{"anio":2022,"mes":4,"valor":0.0}
+{"anio":2022,"mes":5,"valor":0.0}
+{"anio":2022,"mes":6,"valor":0.0}
+{"anio":2022,"mes":7,"valor":0.0}
+{"anio":2022,"mes":8,"valor":0.0}
+{"anio":2022,"mes":9,"valor":0.0}
+{"anio":2022,"mes":10,"valor":0.0}
+{"anio":2022,"mes":11,"valor":0.0}
+{"anio":2022,"mes":12,"valor":0.0}
+{"anio":2022,"mes":13,"valor":0.0}
+{"anio":2022,"mes":14,"valor":0.0}
+{"anio":2022,"mes":15,"valor":0.0}
+{"anio":2022,"mes":16,"valor":0.0}
+{"anio":2022,"mes":17,"valor":0.0}
+{"anio":2022,"mes":18,"valor":0.0}
+
+2024-08-20 21:26:24,970 - INFO - historico 0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+
+2024-08-20 21:26:24,971 - INFO - geting total obs
+2024-08-20 21:26:24,971 - INFO - estimating seasonal order using cannova-hansen test
+2024-08-20 21:26:24,971 - INFO - estimating arima no season 
+2024-08-20 21:26:25,013 - INFO - model hasn't enought obs 17 to try seasnal spec
+2024-08-20 21:26:25,013 - INFO - proyeccion desde 2023 hasta 2023
+2024-08-20 21:26:25,013 - INFO - LOG= forcasting for 18 preiods ahead from 2023 to 2023 
