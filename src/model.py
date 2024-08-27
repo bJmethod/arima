@@ -69,6 +69,7 @@ class model:
     def get_arima(self) -> object:
         self.xt = self.get_diff_series()
         print(f" generating autoarima{self.auto}")
+
         if self.auto:
             self.params = {
                 "autoarima": self.auto,
@@ -138,6 +139,7 @@ class model:
                     f"Best model selected: {best_model_name} with metrics AIC={best_metrics[0]}, BIC={best_metrics[1]}, R2={-best_metrics[2]}")
             else:
                 print("model hasn't enought obs or variance to try seasonal spec")
+                self.fail = True
                 logging.info(f"model hasn't enought obs {len(self.xt)} to try seasnal spec")
 
         else:
@@ -179,8 +181,10 @@ class model:
                     n_periods=periods
                 )
             except Exception as e:
-                print("no model was set or n periods ahead are unapropriate ")
-                logging.ERROR(f"exception raise {e}")
+                print("No model was set or the number of periods ahead is inappropriate.")
+                logging.error(f"Exception raised: {e}")
+                self.predictions = np.array([])
         else:
-            print("model was not setted")
-            logging.ERROR("model was not setted")
+            print("Model was not set.")
+            logging.error("Model was not set.")
+            self.predictions = np.array([])

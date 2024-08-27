@@ -56,18 +56,25 @@ insert_log(conn, id_numerico, indice,'main.py', 'Proy de '+str(steps)+ ' periodo
 
 model.forecast(int(steps))
 
-valoresD = model.predictions if model.predictions is not None else insert_log(conn, id_numerico, indice,'main.py', 'No podemos predecir: id '+str(id_numerico)+ ' indice '+str(indice))
-valores = integrate_series(valoresD, Xt)
+pronostico_incrementos = model.predictions if model.predictions is not None else insert_log(conn, id_numerico, indice, 'main.py', 'No podemos predecir: id ' + str(id_numerico) + ' indice ' + str(indice))
 
-insert_log(conn, id_numerico, indice,'main.py', 'Queremos insertar: '+str(valores))
-logging.info('Queremos insertar: '+str(valores))
-valor_ar, valor_i, valor_ma = model.manual.order
-## update values
+if len(pronostico_incrementos)>0 :
+    valores = integrate_series(pronostico_incrementos, Xt)
+    insert_log(conn, id_numerico, indice, 'main.py', 'Queremos insertar: ' + str(valores))
+    logging.info('Queremos insertar: ' + str(valores))
+    valor_ar, valor_i, valor_ma = model.manual.order
+    id = int(id_numerico)
+    load_forecast_info(conn, id, valor_ar, valor_i, valor_ma, indice)
+    insert_log(conn, id_numerico, indice, 'main.py', 'update for id ' + str(id) + ' valores ' + str(valores))
+    load_forecast_values(conn, id, indice, valores, anio_desde)
+else:
+    valores = []
 
-id = int(id_numerico)
-load_forecast_info(conn,id,valor_ar, valor_i,valor_ma, indice)
 
-insert_log(conn, id_numerico, indice,'main.py', 'update for id '+str(id)+ ' valores '+str(valores))
-if valores is not None:
-    load_forecast_values(conn, id, indice, valores,anio_desde)
+
+
+
+
+
+
 
