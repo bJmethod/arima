@@ -32,12 +32,11 @@ def process_sheet(sheet_name, df):
 
 if __name__ == '__main__':
     # Leer todas las hojas del archivo Excel
-    file_path = 'C:/Users/Usuario/OneDrive/Documentos/projects/arima/src/resources/TEST_ERRORES_26_08.xlsx'
+    file_path = 'C:/Users/Usuario/OneDrive/Documentos/projects/arima/src/resources/historico_2_9_24.xlsx'
     sheets = pd.read_excel(file_path, sheet_name=None)
 
     # Diccionario para almacenar los resultados de cada hoja
     results = {}
-
 
     # Procesar cada hoja y guardar los resultados en el diccionario
     for sheet_name, df in sheets.items():

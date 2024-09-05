@@ -1,7 +1,7 @@
 import sys
 from model import model
 from sensitive import sensitive_dict
-from db_connections import get_data, get_conn,load_forecast_info,load_forecast_values, get_engine, insert_log
+from db_connections import __do_update,upd_procesado,get_data, get_conn,load_forecast_info,load_forecast_values, get_engine, insert_log
 from utils import interpret_steps, integrate_series
 import logging
 
@@ -40,7 +40,14 @@ logging.info(f"historico {json_str}")
 
 ## estimate model
 model = model(Xt, True, [], True)
-model.get_arima()
+seasonInvalid=model.get_arima()
+
+if seasonInvalid:
+    sql_procesado=upd_procesado(conn,id_numerico,indice)
+    __do_update(conn, sql_procesado, id_numerico, indice, 'update_proc_60')
+    print("Este indice posee menos de 60 registros, No es posible realizar estimacion.")
+    print("Se marca procesado true")
+    print(sql_procesado)
 
 ## esto está arrojando un vector de forecast tamaño 2 y deberia ser tamaño 18
 anio_hasta = time_to_forecast.aniohasta.values[0]

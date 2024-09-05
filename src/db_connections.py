@@ -6,6 +6,16 @@ from datetime import datetime
 from src.utils import *
 
 
+def upd_procesado(conn, id_numerico, indice) -> object:
+    sql_procesado = f""" 
+        update confarimamodeloaplicado
+        set procesado=TRUE
+        where confarimacabezalid={id_numerico} and
+        confarimamodeloaplicadoindice= {indice}
+        """
+    return sql_procesado
+
+
 def get_to_from(conn, id_numerico) -> object:
     get_to_from_historic_query = f""" 
          select confarimacabezalhistoricodesde as aniodesde, confarimacabezalhistoricohasta as aniohasta
@@ -29,9 +39,11 @@ def get_forecast_year(conn, id_numerico) -> object:
 
 def get_data_forecast(conn, anio_desde, anio_hasta, indice):
     get_data_query = f"""
-            select anionro as anio, HISTORICOMES as mes, historicoporccomp  as valor
-            from HISTORICO
-            where anionro >= {anio_desde} and anionro<= {anio_hasta} and HISTORICOINDICE = {indice} order by anio,mes
+            SELECT anionro AS anio, HISTORICOMES AS mes, historicoporccomp AS valor  
+            FROM HISTORICO WHERE anionro >= {anio_desde} AND anionro <= {anio_hasta} AND HISTORICOINDICE = {indice}
+            AND anionro IN (SELECT anionro FROM HISTORICO WHERE HISTORICOINDICE = {indice} GROUP BY anionro
+                            HAVING SUM(CASE WHEN HISTORICOMES = 18 THEN 1 ELSE 0 END) > 0 )
+            ORDER BY   anio, mes;
             """
     df = pd.read_sql(get_data_query, conn)
 

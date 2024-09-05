@@ -1,9 +1,7 @@
 import logging
 import numpy as np
-import pandas as pd
 from pmdarima.arima import auto_arima, ARIMA
 from pmdarima.arima.utils import nsdiffs
-
 
 
 class model:
@@ -24,13 +22,12 @@ class model:
         self.fail = False
         self.best_model = None
 
-
     def get_minimum_spec_auto(self):
         logging.info("geting total obs")
         cases = len(self.zt.unique())
         obs = len(self.zt)
-        D = nsdiffs(self.zt, m=18, max_D=2) if cases > 30 else 0
-        try_season = True if obs > 30 else False
+        D = nsdiffs(self.zt, m=18, max_D=2) if cases > 100 else 0
+        try_season = True if obs > 100 else False
         return D, try_season
 
     def calculate_r2(self, y_true, y_pred):
@@ -46,25 +43,23 @@ class model:
         r2 = self.calculate_r2(actual, predictions)
         return aic, bic, r2
 
-## fixeado bug que diferenciaba solo hasta 18 y volvia
+    ## fixeado bug que diferenciaba solo hasta 18 y volvia
     def get_diff_series(self):
         diff = np.zeros(len(self.zt))
         # take series and return the diff vs previous perio# d
         señal = self.zt
         try:
-            for i in range( len(señal)):
-                #modulus function  from i to 18
+            for i in range(len(señal)):
+                # modulus function  from i to 18
 
                 if i == 0:
                     diff[i] = np.nan
                 else:
                     diff[i] = señal[i] - señal[i - 1]
-            return  diff[1:]
+            return diff[1:]
         except Exception as e:
             print(f"error {e}")
             logging.ERROR(f"error {e}")
-
-
 
     def get_arima(self) -> object:
         self.xt = self.get_diff_series()
@@ -86,19 +81,19 @@ class model:
             try:
                 logging.info("estimating arima no season ")
                 model_no_season = auto_arima(self.xt, start_p=self.start, start_q=self.start,
-                                            # orden de ar y ma libre
+                                             # orden de ar y ma libre
                                              max_p=None, max_q=None,
                                              seasonal=self.seasonal,
                                              trace=False,
                                              error_action='ignore',
                                              suppress_warnings=True,
                                              stepwise=True,
-                                            trend = None
-                )
+                                             trend=None
+                                             )
                 self.no_season = model_no_season
                 models.append(('no_season', model_no_season))
             except Exception as e:
-                self.fail= True
+                self.fail = True
                 logging.ERROR(f"model with no season was failed with exception {e}")
 
             ## podemos agregar la estimacion de D con el metodo de canova
@@ -120,14 +115,14 @@ class model:
                                               stepwise=True,
                                               trend=None
 
-                    )
+                                              )
                     self.model_season = model_season
                     models.append(('season', model_season))
                 except Exception as e:
                     self.fail = True
                     logging.ERROR(f"model with season has failed {e}")
                 best_metrics = (
-                np.inf, np.inf, -np.inf)  # Initialize with infinite AIC and BIC, and negative infinite R2
+                    np.inf, np.inf, -np.inf)  # Initialize with infinite AIC and BIC, and negative infinite R2
                 for name, model in models:
                     aic, bic, r2 = self.evaluate_model(model, self.xt)
                     if (aic, bic, -r2) < best_metrics:
@@ -141,6 +136,9 @@ class model:
                 print("model hasn't enought obs or variance to try seasonal spec")
                 self.fail = True
                 logging.info(f"model hasn't enought obs {len(self.xt)} to try seasnal spec")
+                # AGREGAR ACA EL PROCESADO = TRUE
+                seasonInvalid = True
+                return seasonInvalid
 
         else:
             if len(self.spec) > 0:
@@ -174,7 +172,7 @@ class model:
                 order = self.best_model.order
                 seasonal_order = self.best_model.seasonal_order
                 ## forzamos estimacion de proceso arima sin intercepto
-                self.manual = ARIMA(order=order, seasonal_order=seasonal_order,with_intercept=False)
+                self.manual = ARIMA(order=order, seasonal_order=seasonal_order, with_intercept=False)
                 self.manual.fit(self.xt)
 
                 self.predictions = self.manual.predict(
