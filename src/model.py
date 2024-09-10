@@ -24,10 +24,9 @@ class model:
 
     def get_minimum_spec_auto(self):
         logging.info("geting total obs")
-        cases = len(self.zt.unique())
         obs = len(self.zt)
-        D = nsdiffs(self.zt, m=18, max_D=2) if cases > 100 else 0
-        try_season = True if obs > 100 else False
+        D = nsdiffs(self.zt, m=18, max_D=1) if obs > 60 else 0
+        try_season = True if obs > 60 else False
         return D, try_season
 
     def calculate_r2(self, y_true, y_pred):
@@ -136,7 +135,7 @@ class model:
                 print("model hasn't enought obs or variance to try seasonal spec")
                 self.fail = True
                 logging.info(f"model hasn't enought obs {len(self.xt)} to try seasnal spec")
-                # AGREGAR ACA EL PROCESADO = TRUE
+
                 seasonInvalid = True
                 return seasonInvalid
 

@@ -40,14 +40,19 @@ logging.info(f"historico {json_str}")
 
 ## estimate model
 model = model(Xt, True, [], True)
-seasonInvalid=model.get_arima()
+model.get_arima()
 
-if seasonInvalid:
+not_has_model = model.fail
+
+if  not not_has_model :
     sql_procesado=upd_procesado(conn,id_numerico,indice)
-    __do_update(conn, sql_procesado, id_numerico, indice, 'update_proc_60')
-    print("Este indice posee menos de 60 registros, No es posible realizar estimacion.")
+    __do_update(conn, sql_procesado, id_numerico, indice, 'update')
     print("Se marca procesado true")
     print(sql_procesado)
+elif len(Xt) < 60:
+    insert_log(conn, id_numerico, indice,'main.py', 'Este indice posee menos de 60 registros, No es posible realizar estimacion.')
+else:
+    insert_log(conn, id_numerico, indice,'main.py', 'estimacion faillida por variabilidad nula en los datos')
 
 ## esto está arrojando un vector de forecast tamaño 2 y deberia ser tamaño 18
 anio_hasta = time_to_forecast.aniohasta.values[0]

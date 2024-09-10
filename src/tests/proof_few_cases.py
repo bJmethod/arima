@@ -25,14 +25,14 @@ def process_sheet(sheet_name, df):
 
         # Crear un DataFrame con los resultados
         df_result = pd.DataFrame(valores, columns=["pronostico"])
-
+        df_result.to_csv("pronostico_bug.csv",index= False)
         # Retornar los resultados
         return df_result
 
 
 if __name__ == '__main__':
     # Leer todas las hojas del archivo Excel
-    file_path = 'C:/Users/Usuario/OneDrive/Documentos/projects/arima/src/resources/historico_2_9_24.xlsx'
+    file_path = 'C:/Users/Usuario/OneDrive/Documentos/projects/arima/src/resources/10589.xlsx'
     sheets = pd.read_excel(file_path, sheet_name=None)
 
     # Diccionario para almacenar los resultados de cada hoja
